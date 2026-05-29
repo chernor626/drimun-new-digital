@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gender & Women's Leadership | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Empowering young women for diplomacy and governance. Dream MUN's Gender & Women's Leadership programme builds confidence, representation, and policy voice.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/youth-delegation.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'programs' %}">Programs</a><span>/</span>
+      <span>Gender & Women's Leadership</span>
+    </nav>
+    <h1>Gender & Women's Leadership</h1>
+    <p class="hero-lead">Creating intentional spaces for young women to strengthen their confidence, amplify their policy voice, and step boldly into leadership roles in diplomacy and governance.</p>
+  </div>
+</section>
+
+<!-- ========== ABOUT THE PROGRAMME ========== -->
+<section class="section-modern">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Programme overview</span>
+      <h2>Because Africa needs her voice</h2>
+      <p>Women remain underrepresented in diplomacy, peace processes, and political leadership across the continent. Our Gender & Women's Leadership programme directly addresses this gap by providing targeted support, mentorship, and skill‑building for young women.</p>
+      <p>Through workshops, peer networks, and leadership labs, participants develop the confidence to speak, the skills to lead, and the networks to sustain their journey. The programme is inclusive and welcoming to all young people committed to gender equality.</p>
+      <p>We are proud that 55% of our delegates and leadership are women — and this programme ensures that number continues to grow with intention and impact.</p>
+      <div class="hero-actions" style="margin-top: 1.5rem;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply to Join</a>
+        <a href="#components" class="dm-button secondary read-more-btn">Explore Components</a>
+      </div>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/hero-conference.webp' %}" alt="Young women leaders at a diplomatic event" loading="lazy">
+      <img src="{% static 'img/global-youth-assembly.webp' %}" alt="Women leadership workshop" loading="lazy">
+      <div class="floating-note"><strong>55%</strong><br>Women leaders</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT YOU'LL LEARN ========== -->
+<section class="section-modern alt" id="components">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What you'll gain</span>
+      <h2>Leadership that breaks barriers</h2>
+    </div>
+
+    <div class="card-grid reveal">
+      <article class="dm-card">
+        <div class="dm-icon">💪</div>
+        <h3>Confidence & Voice</h3>
+        <p>Build unshakable self‑belief and the communication skills to own every room — from classrooms to conference halls.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">👩‍🎓</div>
+        <h3>Mentorship & Role Models</h3>
+        <p>Connect with accomplished women diplomats, politicians, and civil society leaders who provide guidance and inspiration.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">📋</div>
+        <h3>Policy & Advocacy</h3>
+        <p>Learn to analyse gender policies, draft advocacy briefs, and engage decision‑makers on issues from education to health and security.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🛡️</div>
+        <h3>Safe Spaces & Solidarity</h3>
+        <p>Join a supportive community of peers who share your ambitions and understand the challenges of being a young woman in leadership.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌐</div>
+        <h3>Pan‑African Sisterhood</h3>
+        <p>Build cross‑border networks with young women from across Africa, creating a continent‑wide support system that lasts a lifetime.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">⚖️</div>
+        <h3>UNSCR 1325 & WPS Agenda</h3>
+        <p>Understand the Women, Peace & Security framework and how to advocate for women's meaningful participation in peace processes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROGRAMME FORMAT ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">How it works</span>
+      <h2>Programme format</h2>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">👭</div>
+        <h3>Leadership Circles</h3>
+        <p>Monthly small‑group sessions where women share experiences, set goals, and hold each other accountable.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🏛️</div>
+        <h3>Policy Labs</h3>
+        <p>Practical workshops on drafting gender‑responsive policies and advocacy strategies for local and national impact.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🎤</div>
+        <h3>Speaking Opportunities</h3>
+        <p>Priority access to speaking roles at Dream MUN conferences, partner events, and youth forums.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIAL / IMPACT ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Impact</span>
+      <h2>Voices from the programme</h2>
+    </div>
+
+    <div class="horizontal-scroll reveal" aria-label="Testimonials">
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"Before this programme, I didn't believe I could lead anything. Now I'm the Secretary‑General of my university's MUN club and I mentor 20 younger girls."</p>
+        <strong style="color: var(--dm-red);">— N'deye F., Participant 2023</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"My mentor connected me to a scholarship I never knew existed. Today I'm studying international law — a path I thought was closed to me."</p>
+        <strong style="color: var(--dm-red);">— Aminata B., Participant 2024</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"The women's leadership circle is my safe space. We talk about real challenges — and we push each other to dream bigger."</p>
+        <strong style="color: var(--dm-red);">— Mariam D., Participant 2023</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Step into leadership</span>
+      <h2>Ready to claim your space at the table?</h2>
+      <p>Join a community of bold young women who are breaking barriers and reshaping Africa's leadership landscape — one policy, one speech, one election at a time.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

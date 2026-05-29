@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Dream MUN Sierra Leone | Mission, Vision & Youth Diplomacy{% endblock %}
+{% block meta_description %}Learn about Dream MUN Sierra Leone, a youth diplomacy and leadership platform advancing Model United Nations simulations, SDG action, peacebuilding and professional growth.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/youth-delegation.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span><span>About Dream MUN</span>
+    </nav>
+    <h1>About Dream MUN</h1>
+    <p class="hero-lead">A platform created to help young people move from potential to presence in diplomacy, leadership, peacebuilding and global governance.</p>
+    <!-- stat badge -->
+    <div class="hero-stats" style="max-width: 200px; margin-top: 20px;">
+      <div class="hero-stat"><strong>5+</strong><span>Years of Excellence</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OUR IDENTITY + IMAGES ========== -->
+<section class="section-modern">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Our identity</span>
+      <h2>We prepare young Africans for rooms where decisions are made.</h2>
+      <p>Dream MUN Sierra Leone exists to give youth practical exposure to diplomacy, policy writing, public speaking, international relations and ethical leadership. The organization turns complex global issues into structured learning experiences where young people can debate, negotiate and design solutions.</p>
+      <p>Our approach combines Model United Nations simulations, innovation training, SDG advocacy, peacebuilding dialogue, diplomatic protocol and mentorship. This creates a bridge between education, civic participation and professional opportunity.</p>
+    </div>
+    <div class="media-stack reveal">
+      <img src="{% static 'img/hero-conference.webp' %}" alt="Youth delegates participating in a diplomatic conference" loading="lazy">
+      <img src="{% static 'img/un-chamber.webp' %}" alt="Formal assembly room for global governance dialogue" loading="lazy">
+      <div class="floating-note"><strong>Mission</strong><br>Leadership through diplomacy.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MISSION / VISION / VALUES CARDS ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What drives us</span>
+      <h2>Our foundation</h2>
+    </div>
+    <div class="card-grid reveal">
+      <article class="dm-card">
+        <div class="dm-icon">01</div>
+        <h3>Mission</h3>
+        <p>To empower youth with diplomatic, leadership, peacebuilding and policy skills that prepare them to contribute meaningfully to local and global governance.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">02</div>
+        <h3>Vision</h3>
+        <p>An Africa where young people are confident, informed and represented in the spaces shaping peace, justice, innovation and sustainable development.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">03</div>
+        <h3>Values</h3>
+        <p>Integrity, inclusion, excellence, dialogue, innovation, accountability and youth-led action guide every conference, workshop and partnership.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CORE VALUES (detailed) ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What we stand for</span>
+      <h2>Our Core Values</h2>
+    </div>
+    <div class="card-grid reveal" style="grid-template-columns: repeat(4, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">✦</div>
+        <h3>Integrity</h3>
+        <p>We uphold the highest standards of honesty, transparency, and ethical conduct in all our activities.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">♾</div>
+        <h3>Inclusivity</h3>
+        <p>We welcome youth from all backgrounds, ensuring equal opportunities for participation and leadership.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">⚡</div>
+        <h3>Innovation</h3>
+        <p>We embrace creative approaches to problem‑solving and encourage new ideas for Africa's development.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌍</div>
+        <h3>Pan‑Africanism</h3>
+        <p>We promote African unity, collaboration, and a shared vision for the continent's prosperity.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== MEET THE TEAM ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Meet the team</span>
+      <h2>Our Leadership</h2>
+      <p style="max-width: 600px; margin-inline: auto;">The dedicated individuals driving our mission forward across Africa.</p>
+    </div>
+    <div class="card-grid reveal" style="grid-template-columns: repeat(4, 1fr);">
+      <!-- Team cards – use real images when available -->
+      <div class="dm-card image-card">
+        <img src="{% static 'img/team/fatmata-kamara.jpg' %}" alt="Fatmata Kamara" loading="lazy">
+        <div class="card-body">
+          <h3>Fatmata Kamara</h3>
+          <p style="color: var(--dm-red); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;">Secretary General</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/team/mohamed-sesay.jpg' %}" alt="Mohamed Sesay" loading="lazy">
+        <div class="card-body">
+          <h3>Mohamed Sesay</h3>
+          <p style="color: var(--dm-red); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;">Director of Programs</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/team/mariama-bangura.jpg' %}" alt="Mariama Bangura" loading="lazy">
+        <div class="card-body">
+          <h3>Mariama Bangura</h3>
+          <p style="color: var(--dm-red); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;">Head of Gender & Inclusion</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/team/david-koroma.jpg' %}" alt="David Koroma" loading="lazy">
+        <div class="card-body">
+          <h3>David Koroma</h3>
+          <p style="color: var(--dm-red); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;">Mentorship Lead</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/team/amara-kallon.jpg' %}" alt="Amara Kallon" loading="lazy">
+        <div class="card-body">
+          <h3>Amara Kallon</h3>
+          <p style="color: var(--dm-red); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;">Communications Lead</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/team/sarah-johnson.jpg' %}" alt="Sarah Johnson" loading="lazy">
+        <div class="card-body">
+          <h3>Sarah Johnson</h3>
+          <p style="color: var(--dm-red); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;">Events Coordinator</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/team/michael-thomas.jpg' %}" alt="Michael Thomas" loading="lazy">
+        <div class="card-body">
+          <h3>Michael Thomas</h3>
+          <p style="color: var(--dm-red); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;">Finance Director</p>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="text-align: center; margin-top: 24px;">
+      <a href="#team-full" class="dm-button secondary">Scroll to meet the full team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Join the movement</span>
+      <h2>Be part of Africa's leading youth diplomacy organization.</h2>
+      <p>Whether you're a student, young professional, or organization, there's a place for you at Dream MUN.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'get_involved' %}" class="dm-button primary">Become a Delegate</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Partner with Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

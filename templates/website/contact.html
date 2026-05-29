@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Get in touch with Dream MUN Sierra Leone. Reach out for partnerships, delegate inquiries, media, or general questions.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/un-chamber.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span><span>Contact Us</span>
+    </nav>
+    <h1>Contact Us</h1>
+    <p class="hero-lead">We'd love to hear from you. Whether you're a potential delegate, partner, sponsor, or simply curious – reach out.</p>
+  </div>
+</section>
+
+<!-- ========== CONTACT INFORMATION + FORM ========== -->
+<section class="section-modern">
+  <div class="container-modern contact-grid">
+    <!-- Left column: contact details -->
+    <div class="reveal">
+      <span class="section-kicker">Get in touch</span>
+      <h2>Let's start a conversation.</h2>
+      <p>Our team is available Monday to Friday, 9am – 5pm GMT. We aim to respond within 24 hours.</p>
+
+      <div style="margin-top: 2rem;">
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.5rem;">
+          <div class="dm-icon" style="width: 48px; height: 48px; font-size: 1.2rem; margin-bottom: 0;">📍</div>
+          <div>
+            <strong style="color: var(--dm-primary);">Visit Us</strong><br>
+            <span style="color: var(--dm-muted);">45 Siaka Stevens Street<br>Freetown, Sierra Leone</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.5rem;">
+          <div class="dm-icon" style="width: 48px; height: 48px; font-size: 1.2rem; margin-bottom: 0;">📞</div>
+          <div>
+            <strong style="color: var(--dm-primary);">Call Us</strong><br>
+            <span style="color: var(--dm-muted);">+232 78 622 708</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.5rem;">
+          <div class="dm-icon" style="width: 48px; height: 48px; font-size: 1.2rem; margin-bottom: 0;">✉️</div>
+          <div>
+            <strong style="color: var(--dm-primary);">Email Us</strong><br>
+            <span style="color: var(--dm-muted);">info@dreammun.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column: contact form -->
+    <div class="form-modern reveal">
+      <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send a message</h3>
+      <form action="#" method="POST">
+        {% csrf_token %}
+        <div class="form-row-modern">
+          <div>
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Your first name" required>
+          </div>
+          <div>
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Your last name" required>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="">Select a topic</option>
+            <option value="delegate">Become a Volunteer</option>
+            <option value="partnership">Partnership Opportunities</option>
+            <option value="sponsorship">Sponsorship</option>
+            <option value="media">Media & Press</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+        </div>
+
+        <button type="submit" class="dm-button primary" style="width: 100%; margin-top: 1.5rem;">
+          Send Message ✉️
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MAP SECTION (optional) ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Find us</span>
+      <h2>Our office in Freetown</h2>
+    </div>
+    <div class="reveal">
+      <!-- Replace with your real Google Maps embed or a static image -->
+      <iframe
+        class="map-frame"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.458123456789!2d-13.2345!3d8.4657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMjcnNTYuNSJOIDEzwrAxNCcwNC4yIlc!5e0!3m2!1sen!2sus!4v1620000000000"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Dream MUN Sierra Leone office location">
+      </iframe>
+      <p style="text-align: center; color: var(--dm-muted); margin-top: 1rem;">45 Siaka Stevens Street, Freetown, Sierra Leone</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Stay connected</span>
+      <h2>Follow our journey across Africa.</h2>
+      <p>Join our mailing list, follow us on social media, or simply drop by – we're always happy to meet new friends of the mission.</p>
+      <div class="dm-social" style="justify-content: center; margin-top: 24px;">
+        <a href="#" aria-label="Facebook" style="background: rgba(255,255,255,.15);">f</a>
+        <a href="#" aria-label="Twitter" style="background: rgba(255,255,255,.15);">𝕏</a>
+        <a href="#" aria-label="Instagram" style="background: rgba(255,255,255,.15);">📷</a>
+        <a href="#" aria-label="LinkedIn" style="background: rgba(255,255,255,.15);">in</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

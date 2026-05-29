@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Peacebuilding & SDGs | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Youth‑led peacebuilding, SDG advocacy, and community action. Dream MUN's Peacebuilding & SDGs programme equips young Africans to drive social cohesion and sustainable development.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/global-youth-assembly.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'programs' %}">Programs</a><span>/</span>
+      <span>Peacebuilding & SDGs</span>
+    </nav>
+    <h1>Peacebuilding & SDGs</h1>
+    <p class="hero-lead">Transforming young peacebuilders into advocates for social cohesion, climate action, and the Sustainable Development Goals across African communities.</p>
+  </div>
+</section>
+
+<!-- ========== ABOUT THE PROGRAMME ========== -->
+<section class="section-modern">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Programme overview</span>
+      <h2>From dialogue to action</h2>
+      <p>Peace is not simply the absence of conflict — it is the presence of justice, inclusion, and opportunity. Our Peacebuilding & SDGs programme equips young Africans to be active agents of peace and sustainable development in their communities.</p>
+      <p>Participants learn how policy dialogue, community organising, and evidence‑based advocacy can amplify youth voices in decision‑making spaces. They engage directly with the 17 Sustainable Development Goals (SDGs), exploring how local action drives global progress.</p>
+      <p>This programme blends workshops, simulations, field projects, and mentorship to create a holistic learning experience that turns passion into measurable impact.</p>
+      <div class="hero-actions" style="margin-top: 1.5rem;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply to Join</a>
+        <a href="#components" class="dm-button secondary read-more-btn">Explore Components</a>
+      </div>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/un-chamber.webp' %}" alt="Youth peacebuilding dialogue" loading="lazy">
+      <img src="{% static 'img/hero-conference.webp' %}" alt="SDG community action" loading="lazy">
+      <div class="floating-note"><strong>17</strong><br>SDGs in action</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT YOU'LL LEARN ========== -->
+<section class="section-modern alt" id="components">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What you'll gain</span>
+      <h2>Skills for peace & sustainable development</h2>
+    </div>
+
+    <div class="card-grid reveal">
+      <article class="dm-card">
+        <div class="dm-icon">☮️</div>
+        <h3>Conflict Resolution</h3>
+        <p>Learn mediation, dialogue facilitation, and non‑violent communication techniques to address conflict in your community.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌱</div>
+        <h3>SDG Literacy</h3>
+        <p>Deepen your understanding of the 17 SDGs, their targets, and how local action connects to global frameworks.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">📊</div>
+        <h3>Advocacy & Policy</h3>
+        <p>Develop skills in policy analysis, evidence‑based advocacy, and stakeholder engagement to influence decision‑makers.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🏘️</div>
+        <h3>Community Organising</h3>
+        <p>Learn to mobilise people, build coalitions, and design community‑led initiatives that drive real change.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌍</div>
+        <h3>Climate Action</h3>
+        <p>Explore the intersection of peace, development, and climate — and design projects that address environmental challenges.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">📢</div>
+        <h3>Storytelling for Change</h3>
+        <p>Use narrative, media, and digital tools to communicate your message, inspire action, and amplify impact.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROGRAMME FORMAT ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">How it works</span>
+      <h2>Programme format</h2>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">📚</div>
+        <h3>Workshops & Training</h3>
+        <p>Monthly interactive sessions on peacebuilding theory, SDG frameworks, advocacy techniques, and project design.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌿</div>
+        <h3>Community Projects</h3>
+        <p>Design and implement a real‑world peace or SDG project in your community with mentorship and seed funding support.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🗣️</div>
+        <h3>Policy Dialogues</h3>
+        <p>Participate in structured dialogues with policymakers, diplomats, and civil society leaders — and present your policy briefs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== IMPACT / TESTIMONIAL ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Impact</span>
+      <h2>Voices from the programme</h2>
+    </div>
+
+    <div class="horizontal-scroll reveal" aria-label="Testimonials">
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"The peacebuilding training gave me the tools to mediate a long‑standing conflict between two student groups at my university. Today we run a joint peace club."</p>
+        <strong style="color: var(--dm-red);">— Aisha T., Participant 2023</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"I used to think the SDGs were too big for one person to influence. This programme showed me that local action — even a small recycling project — connects to a global movement."</p>
+        <strong style="color: var(--dm-red);">— Samuel O., Participant 2024</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"Presenting our policy brief to ECOWAS representatives was a moment I'll never forget. Dream MUN opened doors I didn't know existed."</p>
+        <strong style="color: var(--dm-red);">— Fatou B., Participant 2023</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Be a peacebuilder</span>
+      <h2>Ready to turn your passion into peace?</h2>
+      <p>Join the Peacebuilding & SDGs programme and become part of a generation of young Africans building a more just, peaceful, and sustainable continent.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

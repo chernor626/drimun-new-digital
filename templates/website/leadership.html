@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Youth Leadership & Innovation | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Develop critical thinking, problem‑solving, and ethical leadership skills through Dream MUN's Youth Leadership & Innovation programme. Workshops, mentorship, and hands‑on projects for African youth.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/youth-delegation.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'programs' %}">Programs</a><span>/</span>
+      <span>Youth Leadership & Innovation</span>
+    </nav>
+    <h1>Youth Leadership & Innovation</h1>
+    <p class="hero-lead">Equipping young Africans with the mindset, skills, and confidence to lead ethically and innovate boldly in their communities and beyond.</p>
+  </div>
+</section>
+
+<!-- ========== ABOUT THE PROGRAMME ========== -->
+<section class="section-modern">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Programme overview</span>
+      <h2>Beyond the conference room</h2>
+      <p>Leadership doesn't happen by accident — it's built through practice, reflection, and exposure to real‑world challenges. Our Youth Leadership & Innovation programme is designed to turn passionate young people into effective, values‑driven leaders.</p>
+      <p>Through interactive workshops, design‑thinking labs, public communication coaching, and team‑based projects, participants develop the competencies that matter in diplomacy, governance, business, and civil society.</p>
+      <p>This programme runs alongside our core MUN activities and is open to all registered delegates who want to deepen their leadership journey.</p>
+      <div class="hero-actions" style="margin-top: 1.5rem;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply to Join</a>
+        <a href="#components" class="dm-button secondary read-more-btn">Explore Components</a>
+      </div>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/hero-conference.webp' %}" alt="Youth leadership workshop" loading="lazy">
+      <img src="{% static 'img/global-youth-assembly.webp' %}" alt="Young leaders collaborating" loading="lazy">
+      <div class="floating-note"><strong>Lead</strong><br>With purpose.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT YOU'LL LEARN ========== -->
+<section class="section-modern alt" id="components">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What you'll gain</span>
+      <h2>Leadership that lasts a lifetime</h2>
+    </div>
+
+    <div class="card-grid reveal">
+      <article class="dm-card">
+        <div class="dm-icon">🧠</div>
+        <h3>Critical Thinking</h3>
+        <p>Learn to analyse complex issues, question assumptions, and make reasoned decisions — the foundation of effective leadership.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">💡</div>
+        <h3>Design Thinking & Innovation</h3>
+        <p>Use human‑centred design methods to generate creative solutions to challenges in your community.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🎤</div>
+        <h3>Public Communication</h3>
+        <p>Master the art of speaking with clarity, confidence, and impact — whether to a room of five or five hundred.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🤝</div>
+        <h3>Team Building & Collaboration</h3>
+        <p>Work in diverse teams, navigate conflict, and build consensus — essential skills for any leadership role.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">⚖️</div>
+        <h3>Ethical Decision‑Making</h3>
+        <p>Explore frameworks for ethical leadership and learn to align your actions with integrity, fairness, and accountability.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌍</div>
+        <h3>Global Citizenship</h3>
+        <p>Understand how local actions connect to global systems and develop the mindset to lead across borders and cultures.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROGRAMME FORMAT ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">How it works</span>
+      <h2>Programme format</h2>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">📅</div>
+        <h3>Workshops</h3>
+        <p>Monthly interactive sessions covering leadership theory, case studies, and practical exercises. Delivered in‑person and online.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🧪</div>
+        <h3>Innovation Labs</h3>
+        <p>Team‑based projects where you apply design thinking to real challenges — from campus initiatives to community development.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">👤</div>
+        <h3>Mentorship</h3>
+        <p>One‑on‑one and small‑group sessions with experienced leaders, entrepreneurs, and policy professionals.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIAL / IMPACT ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Impact</span>
+      <h2>Voices from the programme</h2>
+    </div>
+
+    <div class="horizontal-scroll reveal" aria-label="Testimonials">
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"The leadership programme gave me the courage to start a youth council at my university. I now lead a team of 20 and we've secured funding for three community projects."</p>
+        <strong style="color: var(--dm-red);">— Isatu B., Participant 2023</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"I used to be terrified of public speaking. After the communication workshops, I delivered a keynote at our national youth summit. Dream MUN transformed me."</p>
+        <strong style="color: var(--dm-red);">— John K., Participant 2024</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"The design‑thinking lab helped me develop a recycling app that now serves 500 users. I never thought I could build something like this."</p>
+        <strong style="color: var(--dm-red);">— Mariama S., Participant 2023</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Take the lead</span>
+      <h2>Ready to become the leader Africa needs?</h2>
+      <p>Join the Youth Leadership & Innovation programme and start building the skills, networks, and confidence to make a difference.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

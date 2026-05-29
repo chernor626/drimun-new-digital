@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Become a Sponsor | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Sponsor Dream MUN Sierra Leone and invest in Africa's future leaders. Choose from flexible sponsorship packages that offer brand visibility, talent access, and measurable SDG impact.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/hero-conference.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'get_involved' %}">Get Involved</a><span>/</span>
+      <span>Become a Sponsor</span>
+    </nav>
+    <h1>Become a Sponsor</h1>
+    <p class="hero-lead">Your investment directly fuels the next generation of African diplomats, peacebuilders, and leaders. Choose a package that aligns with your goals.</p>
+  </div>
+</section>
+
+<!-- ========== WHY SPONSOR ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Why sponsor</span>
+      <h2>The return on your investment</h2>
+      <p>Sponsoring Dream MUN is not just philanthropy — it's a strategic partnership with measurable outcomes for your brand, CSR goals, and Africa's development.</p>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">📈</div>
+        <h3>Brand Exposure</h3>
+        <p>Your logo across all event materials, digital platforms, and press releases reaching 50,000+ youth and stakeholders across Africa.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🎓</div>
+        <h3>Talent Access</h3>
+        <p>Direct engagement with 2,000+ bright, trained delegates — ideal for recruitment, scholarships, or ambassador programmes.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌍</div>
+        <h3>SDG Alignment</h3>
+        <p>Demonstrate commitment to SDG 4 (Education), SDG 5 (Gender Equality), SDG 16 (Peace), and SDG 17 (Partnerships) with a credible youth platform.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SPONSORSHIP PACKAGES ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Sponsorship tiers</span>
+      <h2>Choose your impact level</h2>
+      <p>All packages can be tailored to your organisation's needs. We also welcome in‑kind contributions (venue, tech, printing, etc.).</p>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <!-- Platinum -->
+      <article class="dm-card" style="border-top: 4px solid var(--dm-gold);">
+        <div class="dm-icon" style="background: linear-gradient(135deg, var(--dm-gold), #e6b422);">👑</div>
+        <h3>Platinum</h3>
+        <p style="font-size: 1.8rem; color: var(--dm-primary); font-weight: 900;">$5,000+</p>
+        <ul style="color: var(--dm-muted); padding-left: 1.2rem; margin: 1rem 0;">
+          <li>Headline sponsor of Annual Conference</li>
+          <li>Full‑page ad in delegate handbook</li>
+          <li>Dedicated booth & speaking slot</li>
+          <li>10 delegate scholarships in your name</li>
+          <li>Co‑branded press release</li>
+        </ul>
+        <a href="#enquiry-form" class="dm-button primary">Enquire Now</a>
+      </article>
+
+      <!-- Gold -->
+      <article class="dm-card" style="border-top: 4px solid #c8a951;">
+        <div class="dm-icon" style="background: linear-gradient(135deg, #c8a951, #b8963e);">🥇</div>
+        <h3>Gold</h3>
+        <p style="font-size: 1.8rem; color: var(--dm-primary); font-weight: 900;">$2,500 – $4,999</p>
+        <ul style="color: var(--dm-muted); padding-left: 1.2rem; margin: 1rem 0;">
+          <li>Logo on all event banners & website</li>
+          <li>Half‑page ad in delegate handbook</li>
+          <li>Exhibition space at conference</li>
+          <li>5 delegate scholarships</li>
+          <li>Social media spotlight</li>
+        </ul>
+        <a href="#enquiry-form" class="dm-button secondary">Enquire Now</a>
+      </article>
+
+      <!-- Silver -->
+      <article class="dm-card" style="border-top: 4px solid #a0a0a0;">
+        <div class="dm-icon" style="background: linear-gradient(135deg, #a0a0a0, #808080);">🥈</div>
+        <h3>Silver</h3>
+        <p style="font-size: 1.8rem; color: var(--dm-primary); font-weight: 900;">$500 – $2,499</p>
+        <ul style="color: var(--dm-muted); padding-left: 1.2rem; margin: 1rem 0;">
+          <li>Logo on website & programme</li>
+          <li>2 delegate scholarships</li>
+          <li>Recognition during opening ceremony</li>
+          <li>Digital certificate of appreciation</li>
+          <li>Invitation to networking dinner</li>
+        </ul>
+        <a href="#enquiry-form" class="dm-button secondary">Enquire Now</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SPONSOR ENQUIRY FORM ========== -->
+<section class="section-modern" id="enquiry-form">
+  <div class="container-modern">
+    <div class="form-modern reveal" style="max-width: 860px; margin-inline: auto;">
+      <div class="section-heading" style="display: block; text-align: center; max-width: 600px; margin-inline: auto; margin-bottom: 2rem;">
+        <span class="section-kicker">Let's talk</span>
+        <h2>Sponsorship Enquiry</h2>
+        <p>Complete the form below and our partnerships team will get in touch to customise a package for you.</p>
+      </div>
+
+      <form method="POST" action="{% url 'sponsor' %}">
+        {% csrf_token %}
+
+        <div class="form-row-modern">
+          <div>
+            <label for="org_name">Organisation name *</label>
+            <input type="text" id="org_name" name="org_name" placeholder="e.g., Africell" required>
+          </div>
+          <div>
+            <label for="contact_name">Contact person *</label>
+            <input type="text" id="contact_name" name="contact_name" placeholder="e.g., Jane Doe" required>
+          </div>
+        </div>
+
+        <div class="form-row-modern" style="margin-top: 1rem;">
+          <div>
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div>
+            <label for="phone">Phone number *</label>
+            <div style="display: flex; gap: 10px;">
+              <span style="background: var(--dm-soft); padding: 14px 16px; border-radius: 16px 0 0 16px; border: 1px solid rgba(7,25,70,.16); border-right: 0;">+</span>
+              <input type="tel" id="phone" name="phone" placeholder="232 76 123 456" required style="flex: 1; border-radius: 0 16px 16px 0;">
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <label for="package">Preferred sponsorship level *</label>
+          <select id="package" name="package" required>
+            <option value="" selected disabled>Select a package</option>
+            <option value="platinum">Platinum ($5,000+)</option>
+            <option value="gold">Gold ($2,500 – $4,999)</option>
+            <option value="silver">Silver ($500 – $2,499)</option>
+            <option value="custom">Custom / In‑kind</option>
+          </select>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <label for="message">Additional details or requests</label>
+          <textarea id="message" name="message" rows="3" placeholder="Tell us about your sponsorship goals, timeline, or any special requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="dm-button primary" style="width: 100%; margin-top: 2rem; padding: 16px;">
+          Submit Enquiry ✉️
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Invest in the future</span>
+      <h2>Your sponsorship changes lives.</h2>
+      <p>From a single delegate scholarship to headline conference sponsorship, every contribution helps us equip young Africans with the skills, confidence, and networks to lead.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'contact' %}" class="dm-button primary">Contact Us Directly</a>
+        <a href="{% url 'about' %}" class="dm-button ghost read-more-btn">Learn More About Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<style>
+  /* Sponsorship package specific tweaks */
+  .dm-card ul {
+    margin-bottom: 1.5rem;
+  }
+  .dm-card ul li {
+    margin-bottom: 0.5rem;
+  }
+</style>
+{% endblock %}

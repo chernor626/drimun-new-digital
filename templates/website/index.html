@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dream MUN Sierra Leone | Youth Diplomacy, Leadership & SDG Action{% endblock %}
+{% block meta_description %}Join Dream MUN Sierra Leone for high-level Model United Nations simulations, youth leadership, peacebuilding, SDGs advocacy, diplomatic protocol training, mentorship, and professional networks.{% endblock %}
+{% block og_title %}Dream MUN Sierra Leone | Youth Diplomacy & Leadership{% endblock %}
+{% block og_description %}A modern platform preparing African youth for diplomacy, governance, innovation, peacebuilding, and sustainable development leadership.{% endblock %}
+
+{% block content %}
+<section class="dm-hero" style="--hero-image: url('{% static 'img/hero-conference.webp' %}');">
+  <div class="orbit" aria-hidden="true"></div>
+  <div class="container-modern">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="hero-eyebrow">African youth diplomacy platform</span>
+        <h1 class="hero-title">Where young leaders negotiate the future.</h1>
+        <p class="hero-lead">Dream MUN Sierra Leone develops bold, ethical and globally minded youth through diplomatic simulations, leadership innovation, peacebuilding, SDG action, diplomatic protocol and professional networks.</p>
+        <div class="hero-actions">
+          <a href="{% url 'get_involved' %}" class="dm-button primary">Become a Delegate</a>
+          <a href="{% url 'programs' %}" class="dm-button ghost read-more-btn">Explore Programs</a>
+        </div>
+        <div class="hero-stats" aria-label="Dream MUN impact statistics">
+          <div class="hero-stat"><strong data-counter="6" data-suffix="+">0+</strong><span>Core programs</span></div>
+          <div class="hero-stat"><strong data-counter="17" data-suffix="+">0+</strong><span>SDGs aligned</span></div>
+          <div class="hero-stat"><strong data-counter="100" data-suffix="%">0%</strong><span>Youth focused</span></div>
+        </div>
+      </div>
+      <aside class="hero-card reveal" data-tilt aria-label="Featured conference card">
+        <img src="{% static 'img/youth-delegation.webp' %}" alt="African youth delegates at a diplomatic conference" loading="eager" width="1008" height="756">
+        <span class="badge-modern">Annual flagship</span>
+        <h3>Annual Dream MUN Conference</h3>
+        <p>High-level UN body replicas, policy drafting, diplomatic debate and multilateral negotiations designed for practical exposure to global governance.</p>
+        <a class="dm-button secondary read-more-btn" href="{% url 'conference' %}">Read More</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">What we do</span>
+        <h2>Programs built to make youth impossible to ignore.</h2>
+      </div>
+      <p>Every program is designed as a practical leadership experience, not just a classroom activity. Delegates learn to speak, negotiate, draft policy, build networks and act on issues affecting Africa and the world.</p>
+    </div>
+    <div class="card-grid">
+      <!-- 1. Annual Conference -->
+      <article class="dm-card">
+        <div class="dm-icon" aria-hidden="true">UN</div>
+        <h3>Annual Dream MUN Conference</h3>
+        <p>High-level diplomatic simulations, UN body replicas, policy drafting and multilateral negotiations for real exposure to international diplomacy.</p>
+        <a href="{% url 'conference' %}" class="dm-button secondary read-more-btn">Read More</a>
+      </article>
+
+      <!-- 2. Leadership & Innovation -->
+      <article class="dm-card">
+        <div class="dm-icon" aria-hidden="true">✦</div>
+        <h3>Youth Leadership & Innovation</h3>
+        <p>Critical thinking, problem-solving and ethical leadership for African youth ready to address continental and global challenges.</p>
+        <a href="{% url 'leadership' %}" class="dm-button secondary read-more-btn">Read More</a>
+      </article>
+
+      <!-- 3. Peacebuilding & SDGs -->
+      <article class="dm-card">
+        <div class="dm-icon" aria-hidden="true">☮</div>
+        <h3>Peacebuilding & SDGs</h3>
+        <p>Youth-led initiatives advancing peace, social cohesion, climate action, governance and SDG implementation across communities.</p>
+        <a href="{% url 'peacebuilding' %}" class="dm-button secondary read-more-btn">Read More</a>
+      </article>
+
+      <!-- 4. Training & Protocol -->
+      <article class="dm-card">
+        <div class="dm-icon" aria-hidden="true">⚖</div>
+        <h3>Training & Diplomatic Protocol</h3>
+        <p>Professional workshops in diplomacy, policy analysis, public speaking, global governance, etiquette and conduct standards.</p>
+        <a href="{% url 'protocol' %}" class="dm-button secondary read-more-btn">Read More</a>
+      </article>
+
+      <!-- 5. Gender & Women's Leadership -->
+      <article class="dm-card">
+        <div class="dm-icon" aria-hidden="true">♀</div>
+        <h3>Gender & Women's Leadership</h3>
+        <p>Spaces for young women to strengthen confidence, representation, policy voice and leadership pathways in diplomacy and governance.</p>
+        <a href="{% url 'gender' %}" class="dm-button secondary read-more-btn">Read More</a>
+      </article>
+
+      <!-- 6. Mentorship & Professional Networks -->
+      <article class="dm-card">
+        <div class="dm-icon" aria-hidden="true">∞</div>
+        <h3>Mentorship & Professional Networks</h3>
+        <p>Connecting young people to mentors, institutions, professionals and opportunities that continue beyond the conference room.</p>
+        <a href="{% url 'mentorship' %}" class="dm-button secondary read-more-btn">Read More</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-modern alt">
+  <div class="container-modern split-grid">
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/un-chamber.webp' %}" alt="United Nations style diplomatic chamber" loading="lazy" width="1170" height="530">
+      <img src="{% static 'img/global-youth-assembly.webp' %}" alt="Young delegates inside an international assembly hall" loading="lazy" width="1200" height="900">
+      <div class="floating-note"><strong>SDG</strong><br>From debate to action.</div>
+    </div>
+    <div class="reveal">
+      <span class="section-kicker">Why it matters</span>
+      <h2>We are building confident negotiators, not silent spectators.</h2>
+      <p>Many young people are passionate about change but lack access to diplomatic spaces, leadership coaching and professional networks. Dream MUN gives them a platform to practice the language, discipline and confidence of global leadership.</p>
+      <p>Participants leave with stronger public speaking, policy writing, research, teamwork and ethical leadership skills. The design of the website now mirrors that ambition: bold, premium, animated and globally credible.</p>
+      <div class="hero-actions">
+        <a href="{% url 'about' %}" class="dm-button primary read-more-btn">Learn About Us</a>
+        <a href="{% url 'impact' %}" class="dm-button secondary read-more-btn">View Impact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Impact dashboard</span>
+      <h2>Youth diplomacy with measurable ambition.</h2>
+      <p>Replace the placeholder numbers below with your real data when available. The animated counter system is already built into the design.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item"><strong data-counter="500" data-suffix="+">0+</strong><span>Youth to reach</span></div>
+      <div class="impact-item"><strong data-counter="40" data-suffix="+">0+</strong><span>Schools & partners</span></div>
+      <div class="impact-item"><strong data-counter="25" data-suffix="+">0+</strong><span>Policy simulations</span></div>
+      <div class="impact-item"><strong data-counter="17">0</strong><span>SDGs connected</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">Upcoming pathways</span>
+        <h2>Events, training and opportunities.</h2>
+      </div>
+      <p>Use this section for your next conference, training workshop, application window or partner forum. Cards support images, metadata and clean calls to action.</p>
+    </div>
+    <div class="horizontal-scroll" aria-label="Featured opportunities">
+      <!-- Event 1: Annual Conference -->
+      <article class="dm-card image-card">
+        <img src="{% static 'img/hero-conference.webp' %}" alt="Delegates attending a formal youth diplomacy conference" loading="lazy" width="1200" height="800">
+        <div class="card-body">
+          <span class="badge-modern">Conference</span>
+          <h3>Dream MUN Annual Conference</h3>
+          <div class="meta-row"><span>Freetown</span><span>Diplomacy</span><span>Applications Open</span></div>
+          <p>Debate global priorities, write resolutions, form alliances and experience international negotiation.</p>
+          <a href="{% url 'event_detail' event_slug='annual-conference-2026' %}" class="dm-button secondary read-more-btn">Read More</a>
+        </div>
+      </article>
+      <!-- Event 2: Diplomatic Bootcamp -->
+      <article class="dm-card image-card">
+        <img src="{% static 'img/un-chamber.webp' %}" alt="International assembly room used for policy debate" loading="lazy" width="1170" height="530">
+        <div class="card-body">
+          <span class="badge-modern">Training</span>
+          <h3>Diplomatic Protocol Bootcamp</h3>
+          <div class="meta-row"><span>Workshop</span><span>Public Speaking</span><span>Policy</span></div>
+          <p>Professional communication, etiquette, research, speech delivery and negotiation standards.</p>
+          <a href="{% url 'event_detail' event_slug='diplomatic-bootcamp-2026' %}" class="dm-button secondary read-more-btn">Read More</a>
+        </div>
+      </article>
+      <!-- Event 3: Leadership Summit -->
+      <article class="dm-card image-card">
+        <img src="{% static 'img/youth-delegation.webp' %}" alt="Young African delegates standing together after a leadership event" loading="lazy" width="1008" height="756">
+        <div class="card-body">
+          <span class="badge-modern">Summit</span>
+          <h3>African Youth Leadership & SDG Summit</h3>
+          <div class="meta-row"><span>Nairobi</span><span>SDGs</span><span>Leadership</span></div>
+          <p>Join youth leaders, policy makers, and innovators to design actionable SDG roadmaps for Africa.</p>
+          <a href="{% url 'event_detail' event_slug='leadership-sdg-summit-2026' %}" class="dm-button secondary read-more-btn">Read More</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Call to action</span>
+      <h2>Ready to make your website and your mission look serious?</h2>
+      <p>This redesign turns Dream MUN into a premium, animated and conversion-focused platform built for delegates, partners, schools, parents and sponsors.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a href="{% url 'contact' %}" class="dm-button primary">Partner With Us</a>
+        <a href="{% url 'get_involved' %}" class="dm-button secondary read-more-btn">Get Involved</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

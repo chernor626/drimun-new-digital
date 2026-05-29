@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Impact | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}See the measurable impact of Dream MUN Sierra Leone: delegates trained, countries reached, policy simulations, women leaders, and SDG action.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/youth-delegation.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span><span>Our Impact</span>
+    </nav>
+    <h1>Our Impact</h1>
+    <p class="hero-lead">Numbers that tell a story of young Africans stepping into leadership, diplomacy, and action.</p>
+  </div>
+</section>
+
+<!-- ========== IMPACT DASHBOARD (counter cards) ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">By the numbers</span>
+      <h2>Measurable change since 2019</h2>
+      <p>Every figure represents a life reached, a skill built, a network formed, and a voice amplified.</p>
+    </div>
+
+    <div class="impact-grid reveal">
+      <div class="impact-item">
+        <strong data-counter="2000" data-suffix="+">0+</strong>
+        <span>Delegates Trained</span>
+      </div>
+      <div class="impact-item">
+        <strong data-counter="15" data-suffix="+">0+</strong>
+        <span>African Countries</span>
+      </div>
+      <div class="impact-item">
+        <strong data-counter="55" data-suffix="%">0%</strong>
+        <span>Women Leaders</span>
+      </div>
+      <div class="impact-item">
+        <strong data-counter="50" data-suffix="+">0+</strong>
+        <span>Partner Organisations</span>
+      </div>
+      <div class="impact-item">
+        <strong data-counter="30" data-suffix="+">0+</strong>
+        <span>Policy Simulations</span>
+      </div>
+      <div class="impact-item">
+        <strong data-counter="100" data-suffix="+">0+</strong>
+        <span>Schools & Institutions</span>
+      </div>
+      <div class="impact-item">
+        <strong data-counter="12" data-suffix="+">0+</strong>
+        <span>Research Briefs</span>
+      </div>
+      <div class="impact-item">
+        <strong data-counter="17" data-suffix="">0</strong>
+        <span>SDGs Connected</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HIGHLIGHTS & ACHIEVEMENTS ========== -->
+<section class="section-modern alt">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Milestones</span>
+      <h2>Beyond the conference room</h2>
+      <p>Our impact extends far beyond diplomatic simulations. Delegates have gone on to secure scholarships, launch community projects, advise policy makers, and represent youth at regional and global forums.</p>
+      <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+        <li style="margin-bottom: 0.8rem;">✅ Policy briefs presented at the African Union and ECOWAS</li>
+        <li style="margin-bottom: 0.8rem;">✅ 55% women leadership across all programmes</li>
+        <li style="margin-bottom: 0.8rem;">✅ Alumni now working in embassies, NGOs, and government</li>
+        <li style="margin-bottom: 0.8rem;">✅ Annual conference recognised by the Ministry of Youth Affairs</li>
+      </ul>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/hero-conference.webp' %}" alt="Youth delegates at a Dream MUN conference" loading="lazy">
+      <img src="{% static 'img/un-chamber.webp' %}" alt="International diplomatic chamber" loading="lazy">
+      <div class="floating-note"><strong>55%</strong><br>Women leaders</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STORIES / TESTIMONIALS (horizontal scroll) ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Voices</span>
+      <h2>What delegates say</h2>
+    </div>
+
+    <div class="horizontal-scroll reveal" aria-label="Testimonials">
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"Dream MUN gave me the confidence to speak on global issues and the network to turn my ideas into action. Today I'm studying international relations on a full scholarship."</p>
+        <strong style="color: var(--dm-red);">— Aminata K., Delegate 2022</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"The diplomatic bootcamp transformed how I approach public speaking and negotiation. I now lead a youth peace initiative in my community."</p>
+        <strong style="color: var(--dm-red);">— Samuel T., Delegate 2023</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"As a woman in leadership, Dream MUN provided a safe space to develop my voice. The mentorship programme connected me with a diplomat who still advises me today."</p>
+        <strong style="color: var(--dm-red);">— Mariam B., Delegate 2021</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"The SDG workshop opened my eyes to how local action can drive global change. I started a recycling project that now serves three schools."</p>
+        <strong style="color: var(--dm-red);">— Joseph K., Delegate 2023</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Be part of the story</span>
+      <h2>Help us reach the next milestone.</h2>
+      <p>Whether you join as a delegate, partner, sponsor, or mentor – your involvement multiplies the impact we can make together.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'get_involved' %}" class="dm-button primary">Get Involved</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

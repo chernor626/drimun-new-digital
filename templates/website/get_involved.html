@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Get Involved | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Join Dream MUN Sierra Leone as a delegate, volunteer, partner, or sponsor. Help shape the next generation of African diplomatic leaders.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/hero-conference.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span><span>Get Involved</span>
+    </nav>
+    <h1>Get Involved</h1>
+    <p class="hero-lead">There's a place for everyone in Africa's leading youth diplomacy movement. Choose how you want to make an impact.</p>
+  </div>
+</section>
+
+<!-- ========== INVOLVEMENT OPTIONS ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">How to join</span>
+      <h2>Your pathway to action</h2>
+      <p>Whether you're a student, young professional, organization, or supporter – there's a meaningful way to contribute.</p>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(2, 1fr);">
+      <!-- Become a Delegate -->
+      <article class="dm-card">
+        <div class="dm-icon">🎓</div>
+        <h3>Become a Delegate</h3>
+        <p>Participate in our annual conference, training workshops, and policy simulations. Develop diplomatic skills, build networks, and represent your country or organization in high‑level debates.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0 1.5rem; padding-left: 1.2rem;">
+          <li>Open to youth aged 16–30</li>
+          <li>No prior MUN experience required</li>
+          <li>Certificates & mentorship included</li>
+        </ul>
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+      </article>
+
+      <!-- Volunteer -->
+      <article class="dm-card">
+        <div class="dm-icon">🤝</div>
+        <h3>Volunteer with Us</h3>
+        <p>Lend your time and skills behind the scenes – help organize events, manage communications, coordinate logistics, or mentor younger delegates.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0 1.5rem; padding-left: 1.2rem;">
+          <li>Flexible, remote or on‑site roles</li>
+          <li>Build leadership & event management skills</li>
+          <li>Be part of a passionate, diverse team</li>
+        </ul>
+        <a href="{% url 'contact' %}" class="dm-button secondary">Sign Up to Volunteer</a>
+      </article>
+
+      <!-- Partner Organisation -->
+      <article class="dm-card">
+        <div class="dm-icon">🏛️</div>
+        <h3>Partner as an Organisation</h3>
+        <p>Schools, universities, NGOs, and businesses can co‑host events, sponsor delegations, or provide expertise. Together we can amplify youth voices across the continent.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0 1.5rem; padding-left: 1.2rem;">
+          <li>Co‑branded events & visibility</li>
+          <li>Access to a network of 2,000+ youth</li>
+          <li>Tailored partnership packages</li>
+        </ul>
+        <a href="{% url 'contact' %}" class="dm-button secondary">Partner with Us</a>
+      </article>
+
+      <!-- Sponsor -->
+      <article class="dm-card">
+        <div class="dm-icon">💡</div>
+        <h3>Sponsor a Programme</h3>
+        <p>Your financial or in‑kind support can fund scholarships, conference materials, travel grants, and digital tools that make our programmes accessible to all.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0 1.5rem; padding-left: 1.2rem;">
+          <li>Recognition on all platforms</li>
+          <li>Impact reporting for your CSR goals</li>
+          <li>Direct investment in African youth leadership</li>
+        </ul>
+        <a href="{% url 'contact' %}" class="dm-button secondary">Become a Sponsor</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MEMBERSHIP / NEWSLETTER ========== -->
+<section class="section-modern alt">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Stay informed</span>
+      <h2>Join our mailing list</h2>
+      <p>Be the first to know about upcoming conferences, training opportunities, and leadership programmes. No spam – only inspiration and opportunity.</p>
+      <form action="#" method="POST" style="display: flex; gap: 12px; margin-top: 1.5rem; flex-wrap: wrap;">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="your@email.com" required style="flex: 1; min-width: 220px; padding: 14px 16px; border: 1px solid rgba(7,25,70,.16); border-radius: 16px; font: inherit;">
+        <button type="submit" class="dm-button primary">Subscribe</button>
+      </form>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/youth-delegation.webp' %}" alt="Youth delegates standing together after a leadership event" loading="lazy">
+      <img src="{% static 'img/un-chamber.webp' %}" alt="Formal diplomatic assembly room" loading="lazy">
+      <div class="floating-note"><strong>Join</strong><br>2,000+ youth</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Make your move</span>
+      <h2>Africa's future needs your voice.</h2>
+      <p>Take the first step today – whether as a delegate, volunteer, partner, or supporter – and become part of a Pan‑African movement that's shaping tomorrow's leaders.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'contact' %}" class="dm-button primary">Contact Us</a>
+        <a href="{% url 'about' %}" class="dm-button ghost read-more-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Mentorship & Professional Networks | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Connect with diplomats, policy experts, and professionals through Dream MUN's Mentorship & Professional Networks programme. Build career‑long relationships that accelerate your leadership journey.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/hero-conference.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'programs' %}">Programs</a><span>/</span>
+      <span>Mentorship & Professional Networks</span>
+    </nav>
+    <h1>Mentorship & Professional Networks</h1>
+    <p class="hero-lead">Turning fleeting conference connections into career‑long relationships that guide, challenge, and accelerate your growth as a young African leader.</p>
+  </div>
+</section>
+
+<!-- ========== ABOUT THE PROGRAMME ========== -->
+<section class="section-modern">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Programme overview</span>
+      <h2>Your network is your net worth</h2>
+      <p>A single conversation with the right mentor can change the trajectory of your life. Our Mentorship & Professional Networks programme is designed to ensure that every Dream MUN delegate leaves with more than just skills — they leave with relationships that open doors.</p>
+      <p>We connect young people to experienced diplomats, policy analysts, academics, entrepreneurs, and civil society leaders who volunteer their time to guide, advise, and champion the next generation. Mentorship pairs are thoughtfully matched based on interests, goals, and professional background.</p>
+      <p>The programme also includes networking events, alumni directories, and exclusive access to opportunities shared within our community — from internships to scholarships to speaking engagements.</p>
+      <div class="hero-actions" style="margin-top: 1.5rem;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply to Join</a>
+        <a href="#components" class="dm-button secondary read-more-btn">Explore Components</a>
+      </div>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/youth-delegation.webp' %}" alt="Mentorship session" loading="lazy">
+      <img src="{% static 'img/un-chamber.webp' %}" alt="Networking event" loading="lazy">
+      <div class="floating-note"><strong>Connect</strong><br>With mentors who care.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT YOU'LL GAIN ========== -->
+<section class="section-modern alt" id="components">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What you'll gain</span>
+      <h2>Relationships that accelerate your future</h2>
+    </div>
+
+    <div class="card-grid reveal">
+      <article class="dm-card">
+        <div class="dm-icon">🧭</div>
+        <h3>One‑on‑One Mentorship</h3>
+        <p>Be paired with a dedicated mentor who provides personalised guidance, feedback, and encouragement over a six‑month cycle.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌐</div>
+        <h3>Alumni Network</h3>
+        <p>Join a growing directory of 2,000+ alumni across 15+ African countries — a lifelong professional community you can tap into anytime.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🎓</div>
+        <h3>Opportunity Pipeline</h3>
+        <p>Receive curated alerts for scholarships, internships, jobs, and conferences shared exclusively within the Dream MUN network.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">📅</div>
+        <h3>Networking Events</h3>
+        <p>Attend virtual and in‑person mixers, career panels, and fireside chats with diplomats, CEOs, and policy leaders.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">📝</div>
+        <h3>CV & Career Coaching</h3>
+        <p>Receive feedback on your CV, personal statement, or interview skills from professionals who hire for the roles you want.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🤝</div>
+        <h3>Peer Accountability</h3>
+        <p>Join small peer groups that meet monthly to set goals, share progress, and hold each other accountable to your ambitions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROGRAMME FORMAT ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">How it works</span>
+      <h2>Programme format</h2>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">🔍</div>
+        <h3>Matching Process</h3>
+        <p>We carefully match you with a mentor based on your interests, career goals, and personal background for the best fit.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">💬</div>
+        <h3>Regular Check‑Ins</h3>
+        <p>Structured monthly meetings with your mentor, plus open access for advice when you need it most.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🏅</div>
+        <h3>Graduation & Continuity</h3>
+        <p>After the formal cycle, mentors and mentees can continue informally — many do, for years.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIAL / IMPACT ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Impact</span>
+      <h2>Voices from the programme</h2>
+    </div>
+
+    <div class="horizontal-scroll reveal" aria-label="Testimonials">
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"My mentor helped me apply for a scholarship I was too intimidated to try. I won it. Now I'm doing my Master's in Public Policy — because someone believed in me."</p>
+        <strong style="color: var(--dm-red);">— Kadija J., Mentee 2023</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"I never thought a busy diplomat would make time for me. My mentor and I still speak every month. He's the reason I work at the AU today."</p>
+        <strong style="color: var(--dm-red);">— Mohamed K., Mentee 2022</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"The alumni network connected me to my first internship. I later hired two Dream MUN graduates myself. The cycle continues."</p>
+        <strong style="color: var(--dm-red);">— Esther N., Alumna & now Mentor 2024</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Build your network</span>
+      <h2>Ready to connect with people who will champion your future?</h2>
+      <p>Join the Mentorship & Professional Networks programme and start building the relationships that will carry you through your career and beyond.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

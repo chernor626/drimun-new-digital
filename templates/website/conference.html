@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Annual Dream MUN Conference | Diplomatic Simulations & Youth Leadership{% endblock %}
+{% block meta_description %}Join the flagship Annual Dream MUN Conference in Freetown. Engage in high‑level UN simulations, policy drafting, networking, and leadership training for African youth.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/hero-conference.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'programs' %}">Programs</a><span>/</span>
+      <span>Annual Conference</span>
+    </nav>
+    <h1>Annual Dream MUN Conference</h1>
+    <p class="hero-lead">The premier diplomatic simulation in Sierra Leone – bringing together 300+ youth from across Africa to debate, negotiate, and design solutions for the world's most pressing challenges.</p>
+    <div class="hero-stats" style="max-width: 320px; margin-top: 24px;">
+      <div class="hero-stat"><strong>3</strong><span>Days</span></div>
+      <div class="hero-stat"><strong>20+</strong><span>Countries</span></div>
+      <div class="hero-stat"><strong>6</strong><span>Committees</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT THE CONFERENCE ========== -->
+<section class="section-modern">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Flagship event</span>
+      <h2>Where diplomacy meets youth action</h2>
+      <p>The Annual Dream MUN Conference is the highlight of our calendar – a three‑day immersive experience where young people step into the shoes of diplomats, represent countries, debate global issues, and draft resolutions that mirror real United Nations processes.</p>
+      <p>Participants are assigned to committees such as the Security Council, General Assembly, ECOWAS, or specialised agencies. They research, negotiate, build coalitions, and present formal policy documents – gaining skills that translate directly into academic, professional, and civic life.</p>
+      <p><strong>No prior MUN experience is required.</strong> We provide training materials and pre‑conference workshops to ensure every delegate feels prepared and confident.</p>
+      <div class="hero-actions" style="margin-top: 1.5rem;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply as a Delegate</a>
+        <a href="#details" class="dm-button secondary read-more-btn">Learn More</a>
+      </div>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/youth-delegation.webp' %}" alt="Youth delegates at the Dream MUN Conference" loading="lazy">
+      <img src="{% static 'img/un-chamber.webp' %}" alt="Formal UN-style committee session" loading="lazy">
+      <div class="floating-note"><strong>2026</strong><br>Applications Open</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT TO EXPECT ========== -->
+<section class="section-modern alt" id="details">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What to expect</span>
+      <h2>Three days that transform you</h2>
+    </div>
+
+    <div class="card-grid reveal">
+      <article class="dm-card">
+        <div class="dm-icon">🏛️</div>
+        <h3>Real UN Simulations</h3>
+        <p>Participate in authentic committee sessions using official rules of procedure. Draft resolutions, deliver speeches, and negotiate with delegates from across Africa.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🎤</div>
+        <h3>Public Speaking & Debate</h3>
+        <p>Sharpen your ability to articulate ideas clearly, think on your feet, and persuade an audience – skills that serve you in any career.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">📜</div>
+        <h3>Policy Writing</h3>
+        <p>Learn to research and write formal position papers and resolutions. Receive feedback from experienced chairs and mentors.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🤝</div>
+        <h3>Networking</h3>
+        <p>Connect with 300+ motivated young leaders, diplomats, academics, and partner organisations. Build friendships and professional contacts that last beyond the conference.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🏆</div>
+        <h3>Awards & Recognition</h3>
+        <p>Outstanding delegates and delegations are recognised with certificates, awards, and opportunities to represent Dream MUN at international events.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🎓</div>
+        <h3>Mentorship Access</h3>
+        <p>Access to our Mentorship Network – connecting you with diplomats, policy experts, and professionals who can guide your journey after the conference.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SAMPLE SCHEDULE ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Schedule</span>
+      <h2>A typical conference timeline</h2>
+    </div>
+
+    <div class="timeline-modern reveal" style="max-width: 820px; margin-inline: auto;">
+      <div class="timeline-item">
+        <strong style="color: var(--dm-red);">Day 1</strong>
+        <h4>Opening Ceremony & Training</h4>
+        <p>Keynote address, diplomatic protocol workshop, committee orientation, and ice‑breaker sessions. Delegates receive country assignments and research briefs.</p>
+      </div>
+      <div class="timeline-item">
+        <strong style="color: var(--dm-red);">Day 2</strong>
+        <h4>Committee Sessions & Negotiations</h4>
+        <p>Full‑day committee sessions. Delegates present position papers, form blocs, debate topics, and begin drafting resolutions.</p>
+      </div>
+      <div class="timeline-item">
+        <strong style="color: var(--dm-red);">Day 3</strong>
+        <h4>Final Debate & Closing Ceremony</h4>
+        <p>Committees vote on resolutions, awards are announced, and the conference closes with a networking dinner and cultural night.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align: center; margin-top: 2rem;">
+      <p style="color: var(--dm-muted);">The exact dates and venue for the next edition will be announced soon. Register your interest to be the first to know.</p>
+      <a href="{% url 'application' %}" class="dm-button primary">Register Interest</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAST HIGHLIGHTS ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Past editions</span>
+      <h2>Moments that shaped us</h2>
+    </div>
+
+    <div class="horizontal-scroll reveal" aria-label="Past conferences">
+      <div class="dm-card image-card">
+        <img src="{% static 'img/youth-delegation.webp' %}" alt="Dream MUN 2024" loading="lazy">
+        <div class="card-body">
+          <span class="badge-modern">2024</span>
+          <h3>Dream MUN Conference</h3>
+          <p>300+ delegates, 18 countries. Theme: "Climate Diplomacy & Peacebuilding".</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/un-chamber.webp' %}" alt="Dream MUN 2023" loading="lazy">
+        <div class="card-body">
+          <span class="badge-modern">2023</span>
+          <h3>Dream MUN Conference</h3>
+          <p>250+ delegates, 15 countries. Theme: "Youth, Governance & SDGs".</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/hero-conference.webp' %}" alt="Dream MUN 2022" loading="lazy">
+        <div class="card-body">
+          <span class="badge-modern">2022</span>
+          <h3>Dream MUN Conference</h3>
+          <p>200+ delegates, 12 countries. First hybrid edition with virtual participation.</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/global-youth-assembly.webp' %}" alt="Dream MUN 2021" loading="lazy">
+        <div class="card-body">
+          <span class="badge-modern">2021</span>
+          <h3>Virtual MUN Conference</h3>
+          <p>150+ delegates, 8 countries. Fully virtual edition connecting youth across Africa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Join us</span>
+      <h2>Your seat at the table is waiting.</h2>
+      <p>Whether you're a first‑time delegate or a seasoned MUN participant, the Annual Dream MUN Conference offers an experience that will stretch your abilities and expand your horizons.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

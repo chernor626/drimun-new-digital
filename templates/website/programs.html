@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Programs | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Explore Dream MUN Sierra Leone's comprehensive programs: Annual Conference, Leadership & Innovation, Peacebuilding & SDGs, Training & Protocol, Gender & Women's Leadership, and Mentorship & Professional Networks.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/hero-conference.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span><span>Programs</span>
+    </nav>
+    <h1>Our Programs</h1>
+    <p class="hero-lead">Six interconnected pathways designed to transform passionate youth into confident, skilled, and globally minded diplomatic leaders.</p>
+  </div>
+</section>
+
+<!-- ========== PROGRAMS OVERVIEW ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What we offer</span>
+      <h2>Programs built for real impact</h2>
+      <p>Every program combines theory with practice — simulations, workshops, mentorship, and community projects that prepare you for leadership in diplomacy, governance, and sustainable development.</p>
+    </div>
+
+    <div class="card-grid reveal">
+      <!-- 1. Annual Conference -->
+      <article class="dm-card">
+        <div class="dm-icon">🏛️</div>
+        <h3>Annual Dream MUN Conference</h3>
+        <p>Our flagship three‑day diplomatic simulation bringing together 300+ youth from across Africa to debate, negotiate, and draft resolutions on pressing global issues.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0; padding-left: 1.2rem;">
+          <li>UN committee simulations</li>
+          <li>Policy drafting & resolution writing</li>
+          <li>Networking with 20+ countries</li>
+        </ul>
+        <a href="{% url 'conference' %}" class="dm-button primary">Learn More →</a>
+      </article>
+
+      <!-- 2. Leadership & Innovation -->
+      <article class="dm-card">
+        <div class="dm-icon">💡</div>
+        <h3>Youth Leadership & Innovation</h3>
+        <p>Develop critical thinking, ethical decision‑making, and creative problem‑solving skills through hands‑on workshops, design labs, and team projects.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0; padding-left: 1.2rem;">
+          <li>Design thinking workshops</li>
+          <li>Public communication coaching</li>
+          <li>Ethical leadership frameworks</li>
+        </ul>
+        <a href="{% url 'leadership' %}" class="dm-button primary">Learn More →</a>
+      </article>
+
+      <!-- 3. Peacebuilding & SDGs -->
+      <article class="dm-card">
+        <div class="dm-icon">☮️</div>
+        <h3>Peacebuilding & SDGs</h3>
+        <p>Turn passion into action. Learn conflict resolution, SDG advocacy, and community organising to drive peace and sustainable development in your community.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0; padding-left: 1.2rem;">
+          <li>Conflict mediation training</li>
+          <li>SDG literacy & advocacy</li>
+          <li>Community project design</li>
+        </ul>
+        <a href="{% url 'peacebuilding' %}" class="dm-button primary">Learn More →</a>
+      </article>
+
+      <!-- 4. Training & Protocol -->
+      <article class="dm-card">
+        <div class="dm-icon">⚖️</div>
+        <h3>Training & Diplomatic Protocol</h3>
+        <p>Master the formal skills of diplomacy: rules of procedure, policy writing, negotiation tactics, and professional etiquette for international settings.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0; padding-left: 1.2rem;">
+          <li>UN rules of procedure</li>
+          <li>Speech writing & delivery</li>
+          <li>Diplomatic etiquette</li>
+        </ul>
+        <a href="{% url 'protocol' %}" class="dm-button primary">Learn More →</a>
+      </article>
+
+      <!-- 5. Gender & Women's Leadership -->
+      <article class="dm-card">
+        <div class="dm-icon">♀️</div>
+        <h3>Gender & Women's Leadership</h3>
+        <p>Intentional spaces for young women to build confidence, amplify their policy voice, and step into leadership roles in diplomacy and governance.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0; padding-left: 1.2rem;">
+          <li>Leadership circles</li>
+          <li>Mentorship from women leaders</li>
+          <li>WPS agenda advocacy</li>
+        </ul>
+        <a href="{% url 'gender' %}" class="dm-button primary">Learn More →</a>
+      </article>
+
+      <!-- 6. Mentorship & Networks -->
+      <article class="dm-card">
+        <div class="dm-icon">🌐</div>
+        <h3>Mentorship & Professional Networks</h3>
+        <p>Connect with diplomats, policy experts, and professionals who guide your journey. Build career‑long relationships that open doors across Africa and beyond.</p>
+        <ul style="color: var(--dm-muted); margin: 1rem 0; padding-left: 1.2rem;">
+          <li>One‑on‑one mentorship</li>
+          <li>Alumni network of 2,000+</li>
+          <li>Career coaching & opportunities</li>
+        </ul>
+        <a href="{% url 'mentorship' %}" class="dm-button primary">Learn More →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW TO GET STARTED ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Your journey</span>
+      <h2>How to get started</h2>
+      <p>You don't need prior experience — just passion and a willingness to learn. Here's your path to becoming a Dream MUN delegate.</p>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">1️⃣</div>
+        <h3>Apply</h3>
+        <p>Complete our delegate application form. Tell us about yourself, your interests, and what you hope to gain.</p>
+        <a href="{% url 'application' %}" class="dm-button secondary read-more-btn">Apply Now</a>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">2️⃣</div>
+        <h3>Prepare</h3>
+        <p>Receive your welcome kit, training materials, and country assignment. Attend pre‑conference workshops to build your skills.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">3️⃣</div>
+        <h3>Participate</h3>
+        <p>Join the conference, workshops, and mentorship sessions. Debate, network, and grow alongside peers from across Africa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROGRAM COMPARISON TABLE ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">At a glance</span>
+      <h2>Find your fit</h2>
+      <p>Not sure where to start? This quick overview helps you choose the program that matches your goals.</p>
+    </div>
+
+    <div class="reveal" style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; background: white; border-radius: var(--dm-radius-lg); overflow: hidden; box-shadow: var(--dm-shadow-soft);">
+        <thead>
+          <tr style="background: var(--dm-primary); color: white;">
+            <th style="padding: 16px; text-align: left;">Program</th>
+            <th style="padding: 16px; text-align: left;">Best for</th>
+            <th style="padding: 16px; text-align: left;">Format</th>
+            <th style="padding: 16px; text-align: left;">Duration</th>
+            <th style="padding: 16px; text-align: center;">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--dm-line);">
+            <td style="padding: 14px 16px; font-weight: 800; color: var(--dm-primary);">Annual Conference</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Aspiring diplomats</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">In‑person</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">3 days</td>
+            <td style="padding: 14px 16px; text-align: center;"><a href="{% url 'conference' %}" class="dm-button secondary read-more-btn" style="padding: 8px 16px; font-size: .85rem;">Details</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--dm-line);">
+            <td style="padding: 14px 16px; font-weight: 800; color: var(--dm-primary);">Leadership & Innovation</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Future leaders</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Hybrid</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Ongoing</td>
+            <td style="padding: 14px 16px; text-align: center;"><a href="{% url 'leadership' %}" class="dm-button secondary read-more-btn" style="padding: 8px 16px; font-size: .85rem;">Details</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--dm-line);">
+            <td style="padding: 14px 16px; font-weight: 800; color: var(--dm-primary);">Peacebuilding & SDGs</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Activists & advocates</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Hybrid</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Ongoing</td>
+            <td style="padding: 14px 16px; text-align: center;"><a href="{% url 'peacebuilding' %}" class="dm-button secondary read-more-btn" style="padding: 8px 16px; font-size: .85rem;">Details</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--dm-line);">
+            <td style="padding: 14px 16px; font-weight: 800; color: var(--dm-primary);">Training & Protocol</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Aspiring professionals</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Bootcamps</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">1–2 days</td>
+            <td style="padding: 14px 16px; text-align: center;"><a href="{% url 'protocol' %}" class="dm-button secondary read-more-btn" style="padding: 8px 16px; font-size: .85rem;">Details</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--dm-line);">
+            <td style="padding: 14px 16px; font-weight: 800; color: var(--dm-primary);">Gender & Women's Leadership</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Young women leaders</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Circles & labs</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Ongoing</td>
+            <td style="padding: 14px 16px; text-align: center;"><a href="{% url 'gender' %}" class="dm-button secondary read-more-btn" style="padding: 8px 16px; font-size: .85rem;">Details</a></td>
+          </tr>
+          <tr>
+            <td style="padding: 14px 16px; font-weight: 800; color: var(--dm-primary);">Mentorship & Networks</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">Career builders</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">1‑on‑1 & events</td>
+            <td style="padding: 14px 16px; color: var(--dm-muted);">6‑month cycles</td>
+            <td style="padding: 14px 16px; text-align: center;"><a href="{% url 'mentorship' %}" class="dm-button secondary read-more-btn" style="padding: 8px 16px; font-size: .85rem;">Details</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Ready to begin</span>
+      <h2>Which program will you choose?</h2>
+      <p>Whether you want to debate global policy, build peace in your community, or develop professional diplomatic skills — there's a place for you at Dream MUN.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply as a Delegate</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

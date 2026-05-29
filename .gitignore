@@ -1,0 +1,28 @@
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Database
+db.sqlite3
+*.db
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
+/staticfiles/
+/static/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.env

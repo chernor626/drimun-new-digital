@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Training & Diplomatic Protocol | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Master diplomacy, policy analysis, public speaking, and formal etiquette through Dream MUN's professional Training & Diplomatic Protocol programme.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/un-chamber.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'programs' %}">Programs</a><span>/</span>
+      <span>Training & Diplomatic Protocol</span>
+    </nav>
+    <h1>Training & Diplomatic Protocol</h1>
+    <p class="hero-lead">Professional workshops that turn passionate youth into polished, confident, and globally competent diplomats ready for any formal setting.</p>
+  </div>
+</section>
+
+<!-- ========== ABOUT THE PROGRAMME ========== -->
+<section class="section-modern">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">Programme overview</span>
+      <h2>The art and discipline of diplomacy</h2>
+      <p>Diplomacy requires more than passion — it demands precision, etiquette, and a deep understanding of formal processes. Our Training & Diplomatic Protocol programme fills the gap between academic knowledge and practical, professional conduct.</p>
+      <p>Participants learn the rules of procedure used in real United Nations sessions, master formal correspondence, refine their public speaking and negotiation skills, and understand the cultural intelligence needed to navigate international spaces with ease.</p>
+      <p>This programme is ideal for youth who aspire to careers in foreign service, international organisations, government, or any role that requires polished communication and formal conduct.</p>
+      <div class="hero-actions" style="margin-top: 1.5rem;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply to Join</a>
+        <a href="#components" class="dm-button secondary read-more-btn">Explore Components</a>
+      </div>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static 'img/hero-conference.webp' %}" alt="Diplomatic training workshop" loading="lazy">
+      <img src="{% static 'img/youth-delegation.webp' %}" alt="Young diplomats at a formal session" loading="lazy">
+      <div class="floating-note"><strong>Protocol</strong><br>Speak with authority.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT YOU'LL LEARN ========== -->
+<section class="section-modern alt" id="components">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What you'll gain</span>
+      <h2>Mastery of formal diplomacy</h2>
+    </div>
+
+    <div class="card-grid reveal">
+      <article class="dm-card">
+        <div class="dm-icon">📜</div>
+        <h3>Rules of Procedure</h3>
+        <p>Learn formal debate protocols, points of order, motions, and voting procedures used in real UN and diplomatic sessions.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🎤</div>
+        <h3>Public Speaking & Rhetoric</h3>
+        <p>Master the art of delivering persuasive speeches, impromptu remarks, and formal statements with clarity and confidence.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">✍️</div>
+        <h3>Policy Writing & Research</h3>
+        <p>Learn to draft position papers, resolutions, and policy briefs that meet professional diplomatic standards.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🤝</div>
+        <h3>Negotiation & Consensus Building</h3>
+        <p>Develop techniques for effective negotiation, coalition building, and finding common ground among diverse stakeholders.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">👔</div>
+        <h3>Diplomatic Etiquette</h3>
+        <p>Understand formal dress codes, seating arrangements, titles, introductions, and cultural protocols for international events.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌍</div>
+        <h3>Cultural Intelligence</h3>
+        <p>Learn to navigate cross‑cultural communication with respect and adaptability — essential for any global professional.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROGRAMME FORMAT ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">How it works</span>
+      <h2>Programme format</h2>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">📅</div>
+        <h3>Bootcamps</h3>
+        <p>Intensive one‑ or two‑day workshops delivered before major conferences, covering procedure, speech writing, and negotiation.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🎭</div>
+        <h3>Mock Sessions</h3>
+        <p>Practice in simulated committee settings with real‑time feedback from experienced chairs and diplomats.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🏅</div>
+        <h3>Certification</h3>
+        <p>Receive a Dream MUN Certificate in Diplomatic Protocol upon completion, recognised by partner institutions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIAL / IMPACT ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Impact</span>
+      <h2>Voices from the programme</h2>
+    </div>
+
+    <div class="horizontal-scroll reveal" aria-label="Testimonials">
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"Before this training, I didn't know how to address a formal letter or stand at a podium. Now I've chaired two committee sessions and mentored new delegates."</p>
+        <strong style="color: var(--dm-red);">— Peter M., Participant 2023</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"The negotiation training helped me secure an internship at the Ministry of Foreign Affairs. They were impressed by my preparation and formal communication."</p>
+        <strong style="color: var(--dm-red);">— Amara S., Participant 2024</strong>
+      </div>
+      <div class="dm-card">
+        <p style="font-style: italic; margin-bottom: 1rem;">"I used to panic during Q&amp;A sessions. The public speaking module taught me structured techniques that I now use in every presentation."</p>
+        <strong style="color: var(--dm-red);">— Elizabeth K., Participant 2023</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Master diplomacy</span>
+      <h2>Ready to speak, write, and negotiate like a diplomat?</h2>
+      <p>Join the Training & Diplomatic Protocol programme and gain the professional skills that set you apart in any career.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

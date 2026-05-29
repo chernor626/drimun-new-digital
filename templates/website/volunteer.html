@@ -1,0 +1,413 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Volunteer with Dream MUN | Sierra Leone{% endblock %}
+{% block meta_description %}Sign up to volunteer with Dream MUN Sierra Leone. Help organise events, mentor delegates, manage communications, and more.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/hero-conference.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'get_involved' %}">Get Involved</a><span>/</span>
+      <span>Volunteer Sign‑Up</span>
+    </nav>
+    <h1>Volunteer with Us</h1>
+    <p class="hero-lead">Join our passionate team and help shape the next generation of African diplomatic leaders. Your time and skills can make a real difference.</p>
+  </div>
+</section>
+
+<!-- ========== STEP INDICATOR ========== -->
+<div class="container-modern" style="margin-top: -30px; position: relative; z-index: 2;">
+  <div class="step-indicator">
+    <div class="step active" data-step="1">
+      <div class="step-number">1</div>
+      <span>Personal Info</span>
+    </div>
+    <div class="step" data-step="2">
+      <div class="step-number">2</div>
+      <span>Contact & Availability</span>
+    </div>
+    <div class="step" data-step="3">
+      <div class="step-number">3</div>
+      <span>Skills & Interests</span>
+    </div>
+    <div class="step" data-step="4">
+      <div class="step-number">4</div>
+      <span>Motivation</span>
+    </div>
+    <div class="step" data-step="5">
+      <div class="step-number">✓</div>
+      <span>Complete</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== VOLUNTEER FORM ========== -->
+<section class="section-modern" style="padding-top: 40px;">
+  <div class="container-modern">
+    <div class="form-modern reveal" style="max-width: 860px; margin-inline: auto;">
+      <form id="volunteerForm" method="POST" action="{% url 'volunteer' %}">
+        {% csrf_token %}
+
+        <!-- ===== STEP 1: PERSONAL INFORMATION ===== -->
+        <div class="form-section active" id="step1">
+          <h3 class="form-section-title">Personal Information</h3>
+
+          <div class="form-row-modern">
+            <div>
+              <label for="first_name">First name *</label>
+              <input type="text" id="first_name" name="first_name" placeholder="e.g. Fatmata" required>
+            </div>
+            <div>
+              <label for="last_name">Last name *</label>
+              <input type="text" id="last_name" name="last_name" placeholder="e.g. Kamara" required>
+            </div>
+          </div>
+
+          <div class="form-row-modern" style="margin-top: 1rem;">
+            <div>
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option value="" selected disabled>Select gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="non-binary">Non‑binary</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="dob">Date of birth *</label>
+              <input type="date" id="dob" name="date_of_birth" required>
+            </div>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <label for="country">Country of residence *</label>
+            <input type="text" id="country" name="country" placeholder="e.g. Sierra Leone" required>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="e.g. Freetown">
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="dm-button primary next-step" data-next="step2">Continue</button>
+          </div>
+        </div>
+
+        <!-- ===== STEP 2: CONTACT & AVAILABILITY ===== -->
+        <div class="form-section" id="step2">
+          <h3 class="form-section-title">Contact & Availability</h3>
+
+          <div style="margin-top: 1rem;">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <label for="phone">WhatsApp number *</label>
+            <div style="display: flex; gap: 10px;">
+              <span style="background: var(--dm-soft); padding: 14px 16px; border-radius: 16px 0 0 16px; border: 1px solid rgba(7,25,70,.16); border-right: 0;">+</span>
+              <input type="tel" id="phone" name="phone" placeholder="232 76 123 456" required style="flex: 1; border-radius: 0 16px 16px 0;">
+            </div>
+            <small style="color: var(--dm-muted);">Include country code</small>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <label for="availability">When are you generally available? *</label>
+            <select id="availability" name="availability" required>
+              <option value="" selected disabled>Select...</option>
+              <option value="weekdays_morning">Weekdays – mornings</option>
+              <option value="weekdays_afternoon">Weekdays – afternoons</option>
+              <option value="weekdays_evening">Weekdays – evenings</option>
+              <option value="weekends">Weekends</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <label for="hours_per_week">How many hours per week can you commit? *</label>
+            <select id="hours_per_week" name="hours_per_week" required>
+              <option value="" selected disabled>Select...</option>
+              <option value="1-3">1–3 hours</option>
+              <option value="4-6">4–6 hours</option>
+              <option value="7-10">7–10 hours</option>
+              <option value="10+">10+ hours</option>
+            </select>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <label for="remote">Can you volunteer remotely?</label>
+            <select id="remote" name="remote">
+              <option value="yes">Yes, fully remote</option>
+              <option value="hybrid">Prefer a mix of remote and on‑site</option>
+              <option value="onsite">On‑site only (Freetown)</option>
+            </select>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="dm-button secondary prev-step" data-prev="step1">← Back</button>
+            <button type="button" class="dm-button primary next-step" data-next="step3">Continue</button>
+          </div>
+        </div>
+
+        <!-- ===== STEP 3: SKILLS & INTERESTS ===== -->
+        <div class="form-section" id="step3">
+          <h3 class="form-section-title">Skills & Interests</h3>
+          <p style="color: var(--dm-muted); margin-bottom: 1.5rem;">Tell us how you'd like to contribute. Select all areas that interest you.</p>
+
+          <div class="question-card">
+            <p class="question-text">I'm interested in volunteering in:</p>
+            <div class="checkbox-grid">
+              <label class="checkbox-label"><input type="checkbox" name="interests" value="event_planning"> Event Planning & Logistics</label>
+              <label class="checkbox-label"><input type="checkbox" name="interests" value="communications"> Communications & Social Media</label>
+              <label class="checkbox-label"><input type="checkbox" name="interests" value="mentorship"> Mentorship & Youth Support</label>
+              <label class="checkbox-label"><input type="checkbox" name="interests" value="research"> Research & Policy Briefs</label>
+              <label class="checkbox-label"><input type="checkbox" name="interests" value="fundraising"> Fundraising & Partnerships</label>
+              <label class="checkbox-label"><input type="checkbox" name="interests" value="graphic_design"> Graphic Design & Content Creation</label>
+              <label class="checkbox-label"><input type="checkbox" name="interests" value="tech"> Tech & Website Support</label>
+              <label class="checkbox-label"><input type="checkbox" name="interests" value="other"> Other</label>
+              <input type="text" class="conditional-field" id="otherInterest" name="other_interest" placeholder="Please specify..." style="display: none;">
+            </div>
+          </div>
+
+          <div class="question-card">
+            <p class="question-text">Relevant skills or experience</p>
+            <textarea id="skills" name="skills" rows="3" placeholder="E.g., public speaking, writing, event management, teaching..."></textarea>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="dm-button secondary prev-step" data-prev="step2">← Back</button>
+            <button type="button" class="dm-button primary next-step" data-next="step4">Continue</button>
+          </div>
+        </div>
+
+        <!-- ===== STEP 4: MOTIVATION ===== -->
+        <div class="form-section" id="step4">
+          <h3 class="form-section-title">Final Step – Motivation</h3>
+
+          <div style="margin-top: 1rem;">
+            <label for="why_volunteer">Why do you want to volunteer with Dream MUN? *</label>
+            <textarea id="why_volunteer" name="why_volunteer" rows="3" required placeholder="Tell us what inspires you to join our team..."></textarea>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <label for="languages">Languages spoken</label>
+            <input type="text" id="languages" name="languages" placeholder="e.g., English, Krio, French">
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <label class="checkbox-label">
+              <input type="checkbox" name="terms" required>
+              <span>I confirm that the information above is accurate and I am committed to volunteering if selected. *</span>
+            </label>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="dm-button secondary prev-step" data-prev="step3">← Back</button>
+            <button type="submit" class="dm-button primary">Submit Volunteer Application</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What happens next</span>
+      <h2>Thank you for stepping up.</h2>
+      <p>Our team will review your application and reach out within 10 working days to discuss how you can best contribute.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'about' %}" class="dm-button primary">Learn More About Us</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  (function() {
+    // Same navigation & validation logic as the application page
+    const formSections = document.querySelectorAll('.form-section');
+    const stepIndicators = document.querySelectorAll('.step-indicator .step');
+    const nextButtons = document.querySelectorAll('.next-step');
+    const prevButtons = document.querySelectorAll('.prev-step');
+
+    function showStep(stepId) {
+      formSections.forEach(s => s.classList.remove('active'));
+      document.getElementById(stepId).classList.add('active');
+      updateIndicator(stepId);
+    }
+
+    function updateIndicator(activeStepId) {
+      const stepNum = parseInt(activeStepId.replace('step', ''));
+      stepIndicators.forEach((ind, i) => {
+        ind.classList.remove('active', 'completed');
+        if (i + 1 < stepNum) ind.classList.add('completed');
+        else if (i + 1 === stepNum) ind.classList.add('active');
+      });
+    }
+
+    nextButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentSection = btn.closest('.form-section');
+        if (validateSection(currentSection.id)) {
+          showStep(btn.getAttribute('data-next'));
+        }
+      });
+    });
+
+    prevButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        showStep(btn.getAttribute('data-prev'));
+      });
+    });
+
+    function validateSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      const inputs = section.querySelectorAll('input[required], select[required], textarea[required]');
+      let valid = true;
+      inputs.forEach(input => {
+        if (input.type === 'radio') {
+          const name = input.name;
+          const checked = section.querySelector(`input[name="${name}"]:checked`);
+          const radios = section.querySelectorAll(`input[name="${name}"]`);
+          if (!checked) {
+            radios.forEach(r => r.classList.add('invalid'));
+            valid = false;
+          } else {
+            radios.forEach(r => r.classList.remove('invalid'));
+          }
+        } else if (!input.value.trim()) {
+          input.classList.add('invalid');
+          valid = false;
+        } else {
+          input.classList.remove('invalid');
+        }
+      });
+      return valid;
+    }
+
+    // Conditional field for "Other" interest
+    document.querySelectorAll('input[name="interests"][value="other"]').forEach(cb => {
+      cb.addEventListener('change', function() {
+        const otherField = document.getElementById('otherInterest');
+        if (otherField) otherField.style.display = this.checked ? 'block' : 'none';
+      });
+    });
+
+    // Initial hide
+    document.querySelectorAll('.conditional-field').forEach(el => el.style.display = 'none');
+  })();
+</script>
+
+<style>
+  /* same styles as application page */
+  .form-section { display: none; }
+  .form-section.active { display: block; }
+  .form-section-title {
+    text-align: center;
+    color: var(--dm-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 12px;
+  }
+  .step-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    background: white;
+    border-radius: var(--dm-radius-lg);
+    padding: 20px 16px;
+    box-shadow: var(--dm-shadow-soft);
+    flex-wrap: wrap;
+  }
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 800;
+    color: var(--dm-muted);
+    background: var(--dm-soft);
+    font-size: 0.85rem;
+    transition: all 0.3s;
+  }
+  .step .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: white;
+    color: var(--dm-muted);
+    font-weight: 900;
+    border: 2px solid rgba(7,25,70,.12);
+  }
+  .step.active {
+    background: rgba(200,16,46,.08);
+    color: var(--dm-red);
+  }
+  .step.active .step-number {
+    background: var(--dm-red);
+    color: white;
+    border-color: var(--dm-red);
+  }
+  .step.completed {
+    color: var(--dm-primary);
+    background: rgba(7,25,70,.05);
+  }
+  .step.completed .step-number {
+    background: var(--dm-primary);
+    color: white;
+    border-color: var(--dm-primary);
+  }
+  .question-card {
+    background: var(--dm-soft);
+    border: 1px solid rgba(7,25,70,.08);
+    border-radius: var(--dm-radius-md);
+    padding: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .question-text {
+    color: var(--dm-primary);
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+  .radio-label, .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--dm-text);
+  }
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 4px 16px;
+  }
+  input.invalid, select.invalid, textarea.invalid {
+    border-color: var(--dm-red) !important;
+    box-shadow: 0 0 0 3px rgba(200,16,46,.1);
+  }
+  .conditional-field {
+    margin-top: 0.8rem;
+  }
+</style>
+{% endblock %}

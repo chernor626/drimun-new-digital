@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Events | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}Explore Dream MUN Sierra Leone events – annual conferences, diplomatic bootcamps, policy dialogues, mentorship circles and leadership workshops across Africa.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/hero-conference.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span><span>Events</span>
+    </nav>
+    <h1>Events & Opportunities</h1>
+    <p class="hero-lead">From high‑level diplomatic simulations to intimate policy workshops – every Dream MUN event is a platform for young African leaders to connect, learn, and act.</p>
+  </div>
+</section>
+
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">Upcoming pathways</span>
+        <h2>Events, training and opportunities.</h2>
+      </div>
+      <p>Use this section for your next conference, training workshop, application window or partner forum. Cards support images, metadata and clean calls to action.</p>
+    </div>
+    <div class="horizontal-scroll" aria-label="Featured opportunities">
+      <!-- Event 1: Annual Conference -->
+      <article class="dm-card image-card">
+        <img src="{% static 'img/hero-conference.webp' %}" alt="Delegates attending a formal youth diplomacy conference" loading="lazy" width="1200" height="800">
+        <div class="card-body">
+          <span class="badge-modern">Conference</span>
+          <h3>Dream MUN Annual Conference</h3>
+          <div class="meta-row"><span>Freetown</span><span>Diplomacy</span><span>Applications Open</span></div>
+          <p>Debate global priorities, write resolutions, form alliances and experience international negotiation.</p>
+          <a href="{% url 'event_detail' event_slug='annual-conference-2026' %}" class="dm-button secondary read-more-btn">Read More</a>
+        </div>
+      </article>
+      <!-- Event 2: Diplomatic Bootcamp -->
+      <article class="dm-card image-card">
+        <img src="{% static 'img/un-chamber.webp' %}" alt="International assembly room used for policy debate" loading="lazy" width="1170" height="530">
+        <div class="card-body">
+          <span class="badge-modern">Training</span>
+          <h3>Diplomatic Protocol Bootcamp</h3>
+          <div class="meta-row"><span>Workshop</span><span>Public Speaking</span><span>Policy</span></div>
+          <p>Professional communication, etiquette, research, speech delivery and negotiation standards.</p>
+          <a href="{% url 'event_detail' event_slug='diplomatic-bootcamp-2026' %}" class="dm-button secondary read-more-btn">Read More</a>
+        </div>
+      </article>
+      <!-- Event 3: Leadership Summit -->
+      <article class="dm-card image-card">
+        <img src="{% static 'img/youth-delegation.webp' %}" alt="Young African delegates standing together after a leadership event" loading="lazy" width="1008" height="756">
+        <div class="card-body">
+          <span class="badge-modern">Summit</span>
+          <h3>African Youth Leadership & SDG Summit</h3>
+          <div class="meta-row"><span>Nairobi</span><span>SDGs</span><span>Leadership</span></div>
+          <p>Join youth leaders, policy makers, and innovators to design actionable SDG roadmaps for Africa.</p>
+          <a href="{% url 'event_detail' event_slug='leadership-sdg-summit-2026' %}" class="dm-button secondary read-more-btn">Read More</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAST EVENTS HIGHLIGHTS (horizontal scroll) ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Past Highlights</span>
+      <h2>Moments that shaped us</h2>
+      <p>Relive the energy of previous gatherings that have built our community and sharpened the skills of hundreds of young leaders.</p>
+    </div>
+
+    <div class="horizontal-scroll reveal" aria-label="Past events">
+      <div class="dm-card image-card">
+        <img src="{% static 'img/youth-delegation.webp' %}" alt="Dream MUN 2024" loading="lazy">
+        <div class="card-body">
+          <span class="badge-modern">2024</span>
+          <h3>Dream MUN Annual Conference</h3>
+          <p>300+ delegates, 18 countries represented. Focused on climate diplomacy and peacebuilding.</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/un-chamber.webp' %}" alt="Virtual Bootcamp 2023" loading="lazy">
+        <div class="card-body">
+          <span class="badge-modern">2023</span>
+          <h3>Virtual Diplomatic Bootcamp</h3>
+          <p>5‑day online intensive with mentors from the African Union and UN agencies.</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/hero-conference.webp' %}" alt="Youth Policy Dialogue 2022" loading="lazy">
+        <div class="card-body">
+          <span class="badge-modern">2022</span>
+          <h3>Youth Policy Dialogue at ECOWAS</h3>
+          <p>Presented policy briefs on youth unemployment and education to regional policymakers.</p>
+        </div>
+      </div>
+      <div class="dm-card image-card">
+        <img src="{% static 'img/global-youth-assembly.webp' %}" alt="Leadership Retreat 2021" loading="lazy">
+        <div class="card-body">
+          <span class="badge-modern">2021</span>
+          <h3>Leadership & Innovation Retreat</h3>
+          <p>Weekend retreat focused on design thinking, public speaking, and team‑building.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Stay informed</span>
+      <h2>Don't miss the next opportunity.</h2>
+      <p>Be the first to know about new events, application deadlines, and special programmes.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'get_involved' %}" class="dm-button primary">Become a Delegate</a>
+        <a href="{% url 'contact' %}" class="dm-button ghost read-more-btn">Partner for an Event</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

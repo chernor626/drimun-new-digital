@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ event_title }} | Dream MUN Sierra Leone{% endblock %}
+{% block meta_description %}{{ event_description }}{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static event_image %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'events' %}">Events</a><span>/</span>
+      <span>{{ event_title }}</span>
+    </nav>
+    <h1>{{ event_title }}</h1>
+    <p class="hero-lead">{{ event_subtitle }}</p>
+    <div class="hero-stats" style="max-width: 400px; margin-top: 24px;">
+      <div class="hero-stat"><strong>{{ event_days }}</strong><span>Days</span></div>
+      <div class="hero-stat"><strong>{{ event_date }}</strong><span>Date</span></div>
+      <div class="hero-stat"><strong>{{ event_location }}</strong><span>Location</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENT DETAILS ========== -->
+<section class="section-modern">
+  <div class="container-modern split-grid">
+    <div class="reveal">
+      <span class="section-kicker">{{ event_badge }}</span>
+      <h2>{{ event_heading }}</h2>
+      <p>{{ event_description_full }}</p>
+      
+      {% if event_features %}
+      <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+        {% for feature in event_features %}
+        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;">
+          <span style="color: var(--dm-red); font-weight: 900;">✓</span>
+          <span>{{ feature }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      
+      <div class="hero-actions" style="margin-top: 1.5rem;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+        <a href="{% url 'contact' %}" class="dm-button secondary read-more-btn">Ask a Question</a>
+      </div>
+    </div>
+    <div class="media-stack reveal" aria-hidden="true">
+      <img src="{% static event_image %}" alt="{{ event_title }}" loading="lazy">
+      <img src="{% static event_image_2 %}" alt="{{ event_title }} session" loading="lazy">
+      <div class="floating-note"><strong>{{ event_year }}</strong><br>{{ event_badge }}</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT TO EXPECT ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">What to expect</span>
+      <h2>{{ event_expect_title }}</h2>
+    </div>
+
+    <div class="card-grid reveal">
+      {% for item in event_highlights %}
+      <article class="dm-card">
+        <div class="dm-icon">{{ item.icon }}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENT SCHEDULE ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Schedule</span>
+      <h2>Event Timeline</h2>
+    </div>
+
+    <div class="timeline-modern reveal" style="max-width: 820px; margin-inline: auto;">
+      {% for day in event_schedule %}
+      <div class="timeline-item">
+        <strong style="color: var(--dm-red);">{{ day.day }}</strong>
+        <h4>{{ day.title }}</h4>
+        <p>{{ day.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHO SHOULD ATTEND ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Who should attend</span>
+      <h2>This event is for you if...</h2>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      {% for attendee in event_attendees %}
+      <article class="dm-card">
+        <div class="dm-icon">{{ attendee.icon }}</div>
+        <h3>{{ attendee.title }}</h3>
+        <p>{{ attendee.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Join us</span>
+      <h2>Ready to be part of {{ event_title }}?</h2>
+      <p>{{ event_cta_text }}</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'application' %}" class="dm-button primary">Apply Now</a>
+        <a href="{% url 'events' %}" class="dm-button ghost read-more-btn">View All Events</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Dream MUN Sierra Leone{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Dream MUN Sierra Leone: youth diplomacy, leadership, SDGs{% endblock %}">
+  <meta property="og:title" content="{% block og_title %}Dream MUN Sierra Leone{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Youth diplomacy, leadership, SDGs{% endblock %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <style>
+    /* Floating WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 80px;          /* above the back-to-top button */
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 998;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      animation: float 3s ease-in-out infinite;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    
+    /* Logo styling */
+    .dm-brand-logo {
+      height: 40px;
+      width: auto;
+      margin-right: 10px;
+    }
+  </style>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top bar -->
+  <div class="dm-topbar">
+    <div class="container-modern">
+      <span>📞 +232 78 622 708 | ✉️ info@dreammun.com</span>
+      <div class="dm-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky header -->
+  <header class="dm-header">
+    <div class="container-modern dm-nav">
+      <!-- Logo -->
+      <a href="/" class="dm-brand">
+        <img src="{% static 'img/logo.jpeg' %}" alt="Dream MUN Sierra Leone Logo" class="dm-brand-logo">
+        <div class="dm-brand-text">
+          <strong>Dream MUN</strong>
+          <span>Sierra Leone</span>
+        </div>
+      </a>
+
+      <!-- Hamburger button (visible on mobile) -->
+      <button class="dm-menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Nav right panel (desktop: flex row; mobile: fixed side panel) -->
+      <div class="dm-nav-right" id="navRight">
+        <nav aria-label="Main navigation">
+          <ul class="dm-menu" id="mainMenu">
+            <li><a href="{% url 'index' %}" {% if request.path == '/' %}aria-current="page"{% endif %}>Home</a></li>
+
+            <!-- Dropdown -->
+            <li class="dm-dropdown">
+              <a href="{% url 'programs' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                Programs <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dm-dropdown-panel">
+                <a href="{% url 'conference' %}">
+                  <strong>Annual Conference</strong>
+                  <span>Diplomatic simulations</span>
+                </a>
+                <a href="{% url 'leadership' %}">
+                  <strong>Leadership & Innovation</strong>
+                  <span>Skills for Africa</span>
+                </a>
+                <a href="{% url 'peacebuilding' %}">
+                  <strong>Peacebuilding & SDGs</strong>
+                  <span>Community action</span>
+                </a>
+                <a href="{% url 'protocol' %}">
+                  <strong>Training & Protocol</strong>
+                  <span>Diplomatic skills</span>
+                </a>
+                <a href="{% url 'gender' %}">
+                  <strong>Gender & Women's Leadership</strong>
+                  <span>Confidence & representation</span>
+                </a>
+                <a href="{% url 'mentorship' %}">
+                  <strong>Mentorship & Networks</strong>
+                  <span>Career‑long connections</span>
+                </a>
+              </div>
+            </li>
+
+            <li><a href="{% url 'about' %}" {% if '/about/' in request.path %}aria-current="page"{% endif %}>About</a></li>
+            <li><a href="{% url 'events' %}" {% if '/events/' in request.path %}aria-current="page"{% endif %}>Events</a></li>
+            <li><a href="{% url 'impact' %}" {% if '/impact/' in request.path %}aria-current="page"{% endif %}>Impact</a></li>
+            <li><a href="{% url 'contact' %}" {% if '/contact/' in request.path %}aria-current="page"{% endif %}>Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- CTA button (hidden on very small screens) -->
+        <div class="dm-nav-cta">
+          <a href="{% url 'get_involved' %}" class="dm-button primary">Get Involved</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="dm-footer">
+    <div class="container-modern">
+      <div class="footer-grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div>
+                <!-- Logo -->
+      <a href="/" class="dm-brand">
+        <img src="{% static 'img/logo.jpeg' %}" alt="Dream MUN Sierra Leone Logo" class="dm-brand-logo">
+        <div class="dm-brand-text">
+          <strong>Dream MUN</strong>
+          <span>Sierra Leone</span>
+        </div>
+      </a>
+          <p>Building Africa's next generation of diplomatic leaders.</p>
+          <div class="dm-social">
+            <a href="#">f</a><a href="#">𝕏</a><a href="#">📷</a><a href="#">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Programs</h4>
+          <a href="{% url 'conference' %}">Annual Conference</a>
+          <a href="{% url 'leadership' %}">Leadership & Innovation</a>
+          <a href="{% url 'peacebuilding' %}">Peacebuilding & SDGs</a>
+          <a href="{% url 'protocol' %}">Training & Protocol</a>
+          <a href="{% url 'gender' %}">Gender & Women's Leadership</a>
+          <a href="{% url 'mentorship' %}">Mentorship & Networks</a>
+        </div>
+        <div>
+          <h4>About</h4>
+          <a href="{% url 'about' %}">Our Story</a>
+          <a href="{% url 'impact' %}">Impact</a>
+          <a href="{% url 'events' %}">Events</a>
+          <a href="{% url 'contact' %}">Contact</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="{% url 'get_involved' %}">Become a Delegate</a>
+          <a href="{% url 'volunteer' %}">Volunteer</a>
+          <a href="{% url 'partner' %}">Partner</a>
+          <a href="{% url 'sponsor' %}">Sponsor</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© {% now "Y" %} Dream MUN Sierra Leone. All rights reserved.</span>
+        <span>Designed for youth diplomacy.</span>
+        <span>Credited by <a href="https://sulconcodex.com" target="_blank" rel="noopener noreferrer">Sulcon Codex</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/23200000000?text=Hello%20Dream%20MUN%20%F0%9F%91%8B" 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat on WhatsApp">
+    <!-- WhatsApp SVG icon -->
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+      <path d="M16 0C7.164 0 0 7.164 0 16c0 2.84 0.74 5.52 2.04 7.88L0 32l8.36-2.2C10.76 31.14 13.32 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.44c-2.48 0-4.88-0.68-6.92-1.84l-0.48-0.28-4.96 1.32 1.32-4.84-0.32-0.52C3.32 21.32 2.56 19.08 2.56 16.72 2.56 9.36 8.6 3.32 16 3.32S29.44 9.36 29.44 16 23.4 29.44 16 29.44zm6.76-8.4c-0.36-0.2-2.12-1.04-2.44-1.16-0.32-0.12-0.56-0.2-0.8 0.2-0.24 0.4-0.92 1.16-1.12 1.4-0.2 0.24-0.4 0.28-0.76 0.08-0.36-0.2-1.52-0.56-2.88-1.76-1.06-0.94-1.78-2.1-1.98-2.46-0.2-0.36-0.02-0.54 0.18-0.72 0.18-0.16 0.4-0.42 0.6-0.64 0.2-0.22 0.26-0.38 0.38-0.64 0.12-0.26 0.06-0.48-0.04-0.68-0.1-0.2-0.8-1.94-1.1-2.66-0.28-0.7-0.56-0.6-0.8-0.6-0.2 0-0.44-0.02-0.68-0.02-0.24 0-0.62 0.08-0.94 0.4-0.32 0.32-1.24 1.2-1.24 2.92s1.28 3.38 1.46 3.6c0.18 0.22 2.52 3.86 6.1 5.42 0.86 0.38 1.52 0.6 2.04 0.76 0.86 0.28 1.64 0.24 2.26 0.14 0.68-0.1 2.12-0.86 2.42-1.7 0.3-0.84 0.3-1.56 0.22-1.7-0.1-0.14-0.36-0.22-0.72-0.42z"/>
+    </svg>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" data-back-to-top aria-label="Back to top">↑</button>
+
+  <script src="{% static 'js/script.js' %}"></script>
+  <script>
+    // Mobile menu & dropdown toggle
+    (function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const navRight = document.getElementById('navRight');
+      const mainMenu = document.getElementById('mainMenu');
+      const body = document.body;
+
+      // Toggle mobile menu
+      menuToggle.addEventListener('click', () => {
+        const isOpen = body.classList.toggle('menu-open');
+        menuToggle.setAttribute('aria-expanded', isOpen);
+        navRight.classList.toggle('is-open', isOpen);
+      });
+
+      // Close mobile menu when a link (except dropdown toggles) is clicked
+      mainMenu.querySelectorAll('a:not(.dropdown-toggle)').forEach(link => {
+        link.addEventListener('click', () => {
+          body.classList.remove('menu-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          navRight.classList.remove('is-open');
+        });
+      });
+
+      // Dropdown toggle (click instead of hover for all devices)
+      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault(); // Stop immediate navigation to /programs/
+          const parent = toggle.closest('.dm-dropdown');
+          const isOpen = parent.classList.toggle('dropdown-open');
+          toggle.setAttribute('aria-expanded', isOpen);
+
+          // Close other open dropdowns
+          document.querySelectorAll('.dm-dropdown.dropdown-open').forEach(dd => {
+            if (dd !== parent) {
+              dd.classList.remove('dropdown-open');
+              dd.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dm-dropdown')) {
+          document.querySelectorAll('.dm-dropdown.dropdown-open').forEach(dd => {
+            dd.classList.remove('dropdown-open');
+            dd.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+      // Close mobile menu on outside click (only when open)
+      document.addEventListener('click', (e) => {
+        if (body.classList.contains('menu-open') && !e.target.closest('#navRight') && !e.target.closest('#menuToggle')) {
+          body.classList.remove('menu-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          navRight.classList.remove('is-open');
+        }
+      });
+    })();
+  </script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

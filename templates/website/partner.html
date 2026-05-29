@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Partner with Dream MUN | Organisations & Institutions{% endblock %}
+{% block meta_description %}Partner with Dream MUN Sierra Leone. Co‑host events, sponsor delegates, share expertise, and help shape Africa's next generation of diplomatic leaders.{% endblock %}
+
+{% block content %}
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero" style="--page-image: url('{% static 'img/global-youth-assembly.webp' %}');">
+  <div class="container-modern">
+    <nav class="breadcrumb-modern" aria-label="Breadcrumb">
+      <a href="{% url 'index' %}">Home</a><span>/</span>
+      <a href="{% url 'get_involved' %}">Get Involved</a><span>/</span>
+      <span>Partner with Us</span>
+    </nav>
+    <h1>Partner with Us</h1>
+    <p class="hero-lead">Join forces with Dream MUN to amplify youth voices, build leadership pipelines, and drive sustainable development across Africa.</p>
+  </div>
+</section>
+
+<!-- ========== WHY PARTNER ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Why partner</span>
+      <h2>Together we go further</h2>
+      <p>When organisations invest in youth diplomacy, they help build a generation of skilled, ethical, and globally minded leaders. Partnership with Dream MUN offers tangible benefits for your organisation and the continent.</p>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="dm-card">
+        <div class="dm-icon">🎯</div>
+        <h3>Brand Visibility</h3>
+        <p>Your logo and name featured across our conferences, digital platforms, and communications – reaching thousands of young people, educators, and policy makers.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🤝</div>
+        <h3>Talent Pipeline</h3>
+        <p>Direct access to trained, motivated youth ready for internships, scholarships, and early‑career opportunities in diplomacy, policy, and development.</p>
+      </article>
+      <article class="dm-card">
+        <div class="dm-icon">🌍</div>
+        <h3>SDG Impact</h3>
+        <p>Align your CSR or institutional goals with measurable contributions to SDG 4 (Quality Education), SDG 5 (Gender Equality), and SDG 16 (Peace, Justice & Strong Institutions).</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARTNERSHIP TYPES ========== -->
+<section class="section-modern alt">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Ways to collaborate</span>
+      <h2>Partnership models</h2>
+    </div>
+
+    <div class="card-grid reveal" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="dm-card">
+        <div class="dm-icon">🏛️</div>
+        <h3>Institutional Partner</h3>
+        <p>Universities, schools, and government bodies can co‑host conferences, provide venues, or integrate Dream MUN into academic programmes.</p>
+      </div>
+      <div class="dm-card">
+        <div class="dm-icon">💼</div>
+        <h3>Corporate Sponsor</h3>
+        <p>Sponsor a conference, a scholarship fund, or a specific programme track. Receive brand exposure, delegate engagement, and impact reporting.</p>
+      </div>
+      <div class="dm-card">
+        <div class="dm-icon">🌱</div>
+        <h3>NGO / Civil Society</h3>
+        <p>Collaborate on peacebuilding, SDG advocacy, and community projects. Share expertise and co‑design workshops that align with your mission.</p>
+      </div>
+      <div class="dm-card">
+        <div class="dm-icon">📣</div>
+        <h3>Media Partner</h3>
+        <p>Amplify youth voices through coverage, storytelling, and digital campaigns. Help us reach new audiences across the continent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARTNER ENQUIRY FORM ========== -->
+<section class="section-modern">
+  <div class="container-modern">
+    <div class="form-modern reveal" style="max-width: 860px; margin-inline: auto;">
+      <div class="section-heading" style="display: block; text-align: center; max-width: 600px; margin-inline: auto; margin-bottom: 2rem;">
+        <span class="section-kicker">Start a conversation</span>
+        <h2>Partner Enquiry</h2>
+        <p>Fill out the form below and our partnerships team will get back to you within 5 working days.</p>
+      </div>
+
+      <form method="POST" action="{% url 'partner' %}">
+        {% csrf_token %}
+
+        <div class="form-row-modern">
+          <div>
+            <label for="org_name">Organisation name *</label>
+            <input type="text" id="org_name" name="org_name" placeholder="e.g., University of Makeni" required>
+          </div>
+          <div>
+            <label for="org_type">Organisation type *</label>
+            <select id="org_type" name="org_type" required>
+              <option value="" selected disabled>Select...</option>
+              <option value="university">University / School</option>
+              <option value="ngo">NGO / Civil Society</option>
+              <option value="corporate">Corporate / Business</option>
+              <option value="government">Government / Ministry</option>
+              <option value="media">Media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-modern" style="margin-top: 1rem;">
+          <div>
+            <label for="contact_name">Contact person full name *</label>
+            <input type="text" id="contact_name" name="contact_name" placeholder="e.g., Mohamed Sesay" required>
+          </div>
+          <div>
+            <label for="contact_role">Role / Title</label>
+            <input type="text" id="contact_role" name="contact_role" placeholder="e.g., Partnerships Manager">
+          </div>
+        </div>
+
+        <div class="form-row-modern" style="margin-top: 1rem;">
+          <div>
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="you@organisation.org" required>
+          </div>
+          <div>
+            <label for="phone">Phone number *</label>
+            <div style="display: flex; gap: 10px;">
+              <span style="background: var(--dm-soft); padding: 14px 16px; border-radius: 16px 0 0 16px; border: 1px solid rgba(7,25,70,.16); border-right: 0;">+</span>
+              <input type="tel" id="phone" name="phone" placeholder="232 76 123 456" required style="flex: 1; border-radius: 0 16px 16px 0;">
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <label for="country">Country *</label>
+          <input type="text" id="country" name="country" placeholder="e.g., Sierra Leone" required>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <label>I'm interested in (select all that apply):</label>
+          <div class="checkbox-grid" style="margin-top: 0.5rem;">
+            <label class="checkbox-label"><input type="checkbox" name="partnership_type" value="institutional"> Institutional Partnership</label>
+            <label class="checkbox-label"><input type="checkbox" name="partnership_type" value="sponsorship"> Sponsorship</label>
+            <label class="checkbox-label"><input type="checkbox" name="partnership_type" value="programme"> Programme Collaboration</label>
+            <label class="checkbox-label"><input type="checkbox" name="partnership_type" value="media"> Media Partnership</label>
+            <label class="checkbox-label"><input type="checkbox" name="partnership_type" value="other"> Other</label>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <label for="message">Tell us about your organisation and how you'd like to partner *</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Briefly describe your organisation and your partnership ideas..."></textarea>
+        </div>
+
+        <button type="submit" class="dm-button primary" style="width: 100%; margin-top: 2rem; padding: 16px;">
+          Submit Enquiry ✉️
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="section-modern impact-band">
+  <div class="container-modern">
+    <div class="section-heading center reveal">
+      <span class="section-kicker">Let's build together</span>
+      <h2>Africa's future needs all hands on deck.</h2>
+      <p>Whether you're a small NGO or a multinational institution, your partnership can unlock opportunities for thousands of young leaders. Let's start a conversation.</p>
+      <div class="hero-actions" style="justify-content: center; margin-top: 24px; display: flex; gap: 14px;">
+        <a href="{% url 'contact' %}" class="dm-button primary">Contact Us Directly</a>
+        <a href="{% url 'about' %}" class="dm-button ghost read-more-btn">Learn About Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<style>
+  /* Additional partner form styles – reuse what's already in your style.css */
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--dm-text);
+  }
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4px 16px;
+  }
+  input.invalid, select.invalid, textarea.invalid {
+    border-color: var(--dm-red) !important;
+    box-shadow: 0 0 0 3px rgba(200,16,46,.1);
+  }
+</style>
+{% endblock %}
