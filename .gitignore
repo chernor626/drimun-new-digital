@@ -16,8 +16,7 @@ db.sqlite3
 *.pot
 *.pyc
 local_settings.py
-/staticfiles/
-/static/
+
 
 # OS
 .DS_Store
